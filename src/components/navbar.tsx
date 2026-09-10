@@ -61,7 +61,7 @@ export default function Navbar() {
 
           {/* Desktop socials */}
           <div className="hidden md:flex items-center gap-3">
-            <Link href="https://github.com/Mr-Borolox-sudo" target="_blank" aria-label="GitHub"
+            <Link href="https://github.com/ahammed-shihab" target="_blank" aria-label="GitHub"
               className="text-gray-500 hover:text-white transition-colors duration-300">
               <FaGithub size={17} />
             </Link>
@@ -125,7 +125,7 @@ export default function Navbar() {
               transition={{ delay: 0.3 }}
               className="flex gap-6"
             >
-              <Link href="https://github.com/Mr-Borolox-sudo" target="_blank"
+              <Link href="https://github.com/ahammed-shihab" target="_blank"
                 className="text-gray-500 hover:text-white transition-colors"><FaGithub size={22} /></Link>
               <Link href="https://www.linkedin.com/in/shihab-ahammed/" target="_blank"
                 className="text-gray-500 hover:text-[#0a66c2] transition-colors"><FaLinkedin size={22} /></Link>

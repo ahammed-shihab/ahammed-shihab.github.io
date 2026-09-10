@@ -34,8 +34,8 @@ const contactInfo = [
   {
     icon: <FaGithub size={18} />,
     label: "GitHub",
-    value: "Mr-Borolox-sudo",
-    href: "https://github.com/Mr-Borolox-sudo",
+    value: "ahammed-shihab",
+    href: "https://github.com/ahammed-shihab",
   },
   {
     icon: <MapPin size={18} />,
