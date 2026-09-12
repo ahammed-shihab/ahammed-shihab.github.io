@@ -51,6 +51,9 @@ export default function RootLayout({
       className={`${geist.variable} ${jetbrains.variable} scroll-smooth dark`}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+      </head>
       <body className="bg-surface-obsidian font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-surface-obsidian min-h-screen flex flex-col">
         <Navbar />
         <main className="flex-1 w-full pt-16 bg-surface-obsidian">

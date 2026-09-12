@@ -114,7 +114,7 @@ export default function Hero() {
 {/*  Profile Meta Badge with Portrait Placeholder  */}
 <div className="p-space-md rounded-xl bg-surface-container/60 shadow-lg backdrop-blur-md flex items-center gap-space-md">
 <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 shadow-[0_0_16px_rgba(0,242,254,0.3)]">
-<img className="w-full h-full object-cover" data-alt="Close-up portrait of Shihab Ahammed, a young South Asian computer science student and security enthusiast smiling warmly indoors wearing glasses and a smart casual patterned shirt, surrounded by deep moody obsidian and cyan ambient screen reflections, tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_h2MAHZPjde-hCDhyqmWg6mtwnUpbo9aE4YPPy3auBJ0xCsBem3a82q6PZ0dyWCaQR7vDacCZDMR-lZV4rHNlW9cGJy8c9Ftwsmuw1u7koaY4bmAW0Z5T-3qviXa-nxdreXsUyVa2Ki022lp9irCyWyo6Q6BaY85qVKS2c7kPJn6Q5B7z43NmNm4mNW2sSiQ1AIR9T9R9LC3RtKgdXyDqG5fRzb3qn_gb2vDCcJ9hmeNoJGH6jnmh"/>
+<Image className="w-full h-full object-cover" alt="Shihab Ahammed" src="/profile.jpg" width={64} height={64} priority />
 </div>
 <div className="min-w-0 flex-1">
 <div className="flex items-center justify-between gap-2">
