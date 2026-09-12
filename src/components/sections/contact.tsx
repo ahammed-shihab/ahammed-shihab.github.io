@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -36,7 +37,7 @@ export default function Contact() {
 {/*  LinkedIn  */}
 <a className="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="https://www.linkedin.com/in/shihab-ahammed/" rel="noreferrer" target="_blank">
 <div className="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
-<span className="material-symbols-outlined text-[20px]">connect_without_contact</span>
+<FaLinkedin size={20} />
 </div>
 <div className="min-w-0">
 <div className="font-label-caps text-label-caps text-text-muted">LINKEDIN</div>
@@ -46,7 +47,7 @@ export default function Contact() {
 {/*  Instagram  */}
 <a className="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="https://www.instagram.com/_laz_yyyy__/" rel="noreferrer" target="_blank">
 <div className="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-fixed group-hover:scale-105 transition-transform">
-<span className="material-symbols-outlined text-[20px]">camera_alt</span>
+<FaInstagram size={20} />
 </div>
 <div className="min-w-0">
 <div className="font-label-caps text-label-caps text-text-muted">INSTAGRAM</div>
@@ -56,7 +57,7 @@ export default function Contact() {
 {/*  GitHub  */}
 <a className="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="https://github.com/ahammed-shihab" rel="noreferrer" target="_blank">
 <div className="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
-<span className="material-symbols-outlined text-[20px]">code</span>
+<FaGithub size={20} />
 </div>
 <div className="min-w-0">
 <div className="font-label-caps text-label-caps text-text-muted">GITHUB</div>

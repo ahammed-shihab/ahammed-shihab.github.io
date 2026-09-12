@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -50,17 +51,17 @@ export default function Hero() {
 <div className="flex items-center gap-space-md pt-space-md">
 <span className="font-label-caps text-label-caps text-text-muted">UPLINK //</span>
 <a className="flex items-center gap-1.5 font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/ahammed-shihab" rel="noreferrer" target="_blank">
-<span className="material-symbols-outlined text-[16px]">terminal</span>
+<FaGithub size={16} />
 <span>GitHub</span>
 </a>
 <span className="text-surface-border">/</span>
 <a className="flex items-center gap-1.5 font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/shihab-ahammed/" rel="noreferrer" target="_blank">
-<span className="material-symbols-outlined text-[16px]">link</span>
+<FaLinkedin size={16} />
 <span>LinkedIn</span>
 </a>
 <span className="text-surface-border">/</span>
 <a className="flex items-center gap-1.5 font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/_laz_yyyy__/" rel="noreferrer" target="_blank">
-<span className="material-symbols-outlined text-[16px]">photo_camera</span>
+<FaInstagram size={16} />
 <span>Instagram</span>
 </a>
 </div>
@@ -114,7 +115,7 @@ export default function Hero() {
 {/*  Profile Meta Badge with Portrait Placeholder  */}
 <div className="p-space-md rounded-xl bg-surface-container/60 shadow-lg backdrop-blur-md flex items-center gap-space-md">
 <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 shadow-[0_0_16px_rgba(0,242,254,0.3)]">
-<Image className="w-full h-full object-cover" alt="Shihab Ahammed" src="/profile.jpg" width={64} height={64} priority />
+<Image className="w-full h-full object-cover" alt="Shihab Ahammed" src="/profile.png" width={64} height={64} priority />
 </div>
 <div className="min-w-0 flex-1">
 <div className="flex items-center justify-between gap-2">
