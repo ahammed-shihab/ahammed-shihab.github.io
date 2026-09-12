@@ -8,7 +8,12 @@ import Contact from "@/components/sections/contact";
 
 export default function Home() {
   return (
-    <div className="w-full">
+    <div className="flex flex-col w-full relative">
+      {/* Subtle cyber glow backdrop layers */}
+      <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-b from-primary-container/10 via-secondary/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div className="absolute top-[1200px] -left-48 w-[500px] h-[500px] bg-primary-fixed-dim/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      <div className="absolute top-[2400px] -right-48 w-[500px] h-[500px] bg-secondary-container/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+      
       <Hero />
       <About />
       <Skills />

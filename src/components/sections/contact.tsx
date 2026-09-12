@@ -1,251 +1,121 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Mail, MessageSquare, Send, MapPin, CheckCircle, XCircle } from "lucide-react";
-import { FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
-import SectionHeading from "@/components/section-heading";
+import React from "react";
 import Link from "next/link";
-import { useState, useRef } from "react";
-import emailjs from "@emailjs/browser";
-
-const SERVICE_ID = "service_0xnp96m";
-const TEMPLATE_ID = "template_lptzgnl";
-const PUBLIC_KEY = "mRuHUWvh_Ab5A6qKP";
-
-const contactInfo = [
-  {
-    icon: <Mail size={18} />,
-    label: "Email",
-    value: "ahammedshihab15@gmail.com",
-    href: "mailto:ahammedshihab15@gmail.com",
-  },
-  {
-    icon: <FaLinkedin size={18} />,
-    label: "LinkedIn",
-    value: "shihab-ahammed",
-    href: "https://www.linkedin.com/in/shihab-ahammed/",
-  },
-  {
-    icon: <FaInstagram size={18} />,
-    label: "Instagram",
-    value: "@_laz_yyyy__",
-    href: "https://www.instagram.com/_laz_yyyy__/",
-  },
-  {
-    icon: <FaGithub size={18} />,
-    label: "GitHub",
-    value: "ahammed-shihab",
-    href: "https://github.com/ahammed-shihab",
-  },
-  {
-    icon: <MapPin size={18} />,
-    label: "Location",
-    value: "Dhaka, Bangladesh",
-    href: null,
-  },
-];
-
-type Status = "idle" | "sending" | "success" | "error";
-
-function SpotlightCard({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    ref.current.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-    ref.current.style.setProperty("--my", `${e.clientY - rect.top}px`);
-  };
-
-  return (
-    <div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      className={`glass-card spotlight ${className}`}
-    >
-      {children}
-    </div>
-  );
-}
+import Image from "next/image";
 
 export default function Contact() {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<Status>("idle");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!formRef.current) return;
-
-    setStatus("sending");
-
-    try {
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, {
-        publicKey: PUBLIC_KEY,
-      });
-      setStatus("success");
-      formRef.current.reset();
-      setTimeout(() => setStatus("idle"), 4000);
-    } catch (error) {
-      console.error("EmailJS error:", error);
-      setStatus("error");
-      setTimeout(() => setStatus("idle"), 4000);
-    }
-  };
-
   return (
-    <section id="contact" className="section relative">
-      <div className="container mx-auto px-6 md:px-12">
-        <SectionHeading
-          title="Get in touch"
-          subtitle="Have a question or want to work together? Reach out!"
-          eyebrow="Contact"
-        />
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 max-w-6xl mx-auto items-start">
-          {/* Contact Info */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-            className="lg:col-span-5 flex flex-col gap-6"
-          >
-            <h3 className="text-xl font-bold text-white mb-2">
-              Contact Information
-            </h3>
-            
-            <div className="flex flex-col gap-4">
-              {contactInfo.map((item, index) => (
-                <SpotlightCard key={index} className="p-4 flex items-center gap-5 group">
-                  <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-gray-400 group-hover:bg-primary-500/10 group-hover:text-primary-400 group-hover:border-primary-500/20 transition-all duration-300">
-                    {item.icon}
-                  </div>
-                  <div className="overflow-hidden">
-                    <p className="text-xs font-mono text-gray-500 mb-1">{item.label}</p>
-                    {item.href ? (
-                      <Link
-                        href={item.href}
-                        target={item.href.startsWith("http") ? "_blank" : undefined}
-                        className="text-gray-200 hover:text-primary-400 transition-colors text-sm font-medium truncate block"
-                      >
-                        {item.value}
-                      </Link>
-                    ) : (
-                      <p className="text-gray-200 text-sm font-medium">{item.value}</p>
-                    )}
-                  </div>
-                </SpotlightCard>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Contact Form */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2, ease: [0.32, 0.72, 0, 1] }}
-            className="lg:col-span-7"
-          >
-            <SpotlightCard className="p-8 md:p-10">
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <label htmlFor="from_name" className="text-xs font-mono uppercase tracking-widest text-gray-400 ml-1">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="from_name"
-                      name="from_name"
-                      required
-                      placeholder="John Doe"
-                      className="w-full bg-[#080808]/50 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/50 transition-all placeholder:text-gray-600"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label htmlFor="from_email" className="text-xs font-mono uppercase tracking-widest text-gray-400 ml-1">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="from_email"
-                      name="from_email"
-                      required
-                      placeholder="john@example.com"
-                      className="w-full bg-[#080808]/50 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/50 transition-all placeholder:text-gray-600"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <label htmlFor="message" className="text-xs font-mono uppercase tracking-widest text-gray-400 ml-1">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    rows={5}
-                    placeholder="Hello, I'd like to talk about..."
-                    className="w-full bg-[#080808]/50 border border-white/10 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-primary-500/50 focus:ring-1 focus:ring-primary-500/50 transition-all placeholder:text-gray-600 resize-none"
-                  ></textarea>
-                </div>
-
-                {/* Status messages */}
-                {status === "success" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center gap-3 text-emerald-400 bg-emerald-400/10 border border-emerald-400/20 rounded-xl px-4 py-3.5 text-sm font-medium"
-                  >
-                    <CheckCircle size={18} />
-                    Message sent! I'll get back to you soon.
-                  </motion.div>
-                )}
-                {status === "error" && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -8 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center gap-3 text-red-400 bg-red-400/10 border border-red-400/20 rounded-xl px-4 py-3.5 text-sm font-medium"
-                  >
-                    <XCircle size={18} />
-                    Something went wrong. Please try emailing me directly.
-                  </motion.div>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={status === "sending"}
-                  className="group w-full py-4 rounded-xl bg-primary-600 hover:bg-primary-500 text-white font-semibold transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed shadow-[0_0_20px_rgba(14,165,233,0.2)] hover:shadow-[0_0_30px_rgba(14,165,233,0.3)] active:scale-[0.98]"
-                >
-                  {status === "sending" ? (
-                    <>
-                      <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      Sending...
-                    </>
-                  ) : status === "success" ? (
-                    <>
-                      <MessageSquare size={18} /> Message Sent
-                    </>
-                  ) : (
-                    <>
-                      Send Message
-                      <Send size={16} className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
-                    </>
-                  )}
-                </button>
-              </form>
-            </SpotlightCard>
-          </motion.div>
-        </div>
-      </div>
-    </section>
+    <section className="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl mb-12" id="contact">
+{/*  Section Kicker Header  */}
+<div className="text-center max-w-2xl mx-auto mb-space-xl">
+<div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-label-caps text-label-caps text-primary-container mb-space-sm">
+<span className="material-symbols-outlined text-[14px]">satellite_alt</span>
+<span>// 06. CONNECT</span>
+</div>
+<h2 className="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs">Get in touch</h2>
+<p className="font-body-md text-body-md text-text-muted">Have a question or want to work together? Reach out!</p>
+</div>
+{/*  Split Grid: Contact Channels vs Form  */}
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-stretch">
+{/*  Left Column: Contact Cards  */}
+<div className="lg:col-span-5 p-space-xl rounded-xl bg-surface-elevated/80 shadow-xl flex flex-col justify-between">
+<div>
+<h3 className="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-lg">Contact Information</h3>
+<div className="flex flex-col gap-space-md">
+{/*  Email  */}
+<a className="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="mailto:ahammedshihab15@gmail.com">
+<div className="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:scale-105 transition-transform">
+<span className="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div className="min-w-0">
+<div className="font-label-caps text-label-caps text-text-muted">EMAIL</div>
+<div className="font-label-code text-label-code text-on-surface truncate">ahammedshihab15@gmail.com</div>
+</div>
+</a>
+{/*  LinkedIn  */}
+<a className="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="https://www.linkedin.com/in/shihab-ahammed/" rel="noreferrer" target="_blank">
+<div className="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span className="material-symbols-outlined text-[20px]">connect_without_contact</span>
+</div>
+<div className="min-w-0">
+<div className="font-label-caps text-label-caps text-text-muted">LINKEDIN</div>
+<div className="font-label-code text-label-code text-on-surface truncate">shihab-ahammed</div>
+</div>
+</a>
+{/*  Instagram  */}
+<a className="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="https://www.instagram.com/_laz_yyyy__/" rel="noreferrer" target="_blank">
+<div className="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-fixed group-hover:scale-105 transition-transform">
+<span className="material-symbols-outlined text-[20px]">camera_alt</span>
+</div>
+<div className="min-w-0">
+<div className="font-label-caps text-label-caps text-text-muted">INSTAGRAM</div>
+<div className="font-label-code text-label-code text-on-surface truncate">@_laz_yyyy__</div>
+</div>
+</a>
+{/*  GitHub  */}
+<a className="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="https://github.com/ahammed-shihab" rel="noreferrer" target="_blank">
+<div className="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span className="material-symbols-outlined text-[20px]">code</span>
+</div>
+<div className="min-w-0">
+<div className="font-label-caps text-label-caps text-text-muted">GITHUB</div>
+<div className="font-label-code text-label-code text-on-surface truncate">ahammed-shihab</div>
+</div>
+</a>
+{/*  Location  */}
+<div className="p-space-md rounded-lg bg-surface-container/60 flex items-center gap-space-md">
+<div className="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-signal-crimson">
+<span className="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div className="min-w-0">
+<div className="font-label-caps text-label-caps text-text-muted">LOCATION</div>
+<div className="font-label-code text-label-code text-on-surface truncate">Dhaka, Bangladesh</div>
+</div>
+</div>
+</div>
+</div>
+<div className="mt-space-lg pt-space-md border-t border-surface-border/40 font-label-caps text-label-caps text-text-muted flex items-center justify-between">
+<span>RESPONSE PROTOCOL</span>
+<span className="text-secondary">&lt; 24 HOURS</span>
+</div>
+</div>
+{/*  Right Column: Interactive Dispatch Message Form  */}
+<div className="lg:col-span-7 p-space-xl rounded-xl bg-surface-elevated/80 shadow-xl flex flex-col justify-between">
+<form className="flex flex-col gap-space-md" id="contactForm" onSubmit={(e) => { e.preventDefault(); document.getElementById('submitStatus')?.classList.remove('hidden'); }}>
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+{/*  Name Input  */}
+<div className="flex flex-col gap-1.5">
+<label className="font-label-code text-label-code text-text-muted" htmlFor="contact-name">NAME</label>
+<input className="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md placeholder:text-outline-variant focus:outline-none focus:ring-1 focus:ring-primary-container shadow-inner" id="contact-name" placeholder="John Doe" required type="text"/>
+</div>
+{/*  Email Input  */}
+<div className="flex flex-col gap-1.5">
+<label className="font-label-code text-label-code text-text-muted" htmlFor="contact-email">EMAIL</label>
+<input className="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md placeholder:text-outline-variant focus:outline-none focus:ring-1 focus:ring-primary-container shadow-inner" id="contact-email" placeholder="john@example.com" required type="email"/>
+</div>
+</div>
+{/*  Message Textarea  */}
+<div className="flex flex-col gap-1.5">
+<label className="font-label-code text-label-code text-text-muted" htmlFor="contact-msg">MESSAGE</label>
+<textarea className="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md placeholder:text-outline-variant focus:outline-none focus:ring-1 focus:ring-primary-container shadow-inner resize-none" id="contact-msg" placeholder="Hello, I'd like to talk about..." required rows={5}></textarea>
+</div>
+{/*  Submit Button  */}
+<button className="w-full py-3.5 px-space-md rounded-xl bg-primary-container text-surface-obsidian font-label-code text-label-code font-bold flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(0,242,254,0.4)] transition-all cursor-pointer" type="submit">
+<span>Send Message</span>
+<span className="material-symbols-outlined text-[18px]">send</span>
+</button>
+{/*  Feedback notification element  */}
+<div className="hidden p-space-sm rounded-lg bg-secondary-container/20 text-secondary font-label-code text-label-code text-center" id="submitStatus">
+            Packet dispatched successfully. Thank you for connecting!
+          </div>
+</form>
+<div className="mt-space-lg pt-space-md border-t border-surface-border/40 font-label-caps text-label-caps text-text-muted flex items-center justify-between">
+<span>ENCRYPTION: 256-BIT END-TO-END</span>
+<span>PGP KEY AVAILABLE ON REQUEST</span>
+</div>
+</div>
+</div>
+</section>
   );
 }

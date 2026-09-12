@@ -1,9 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Mail } from "lucide-react";
-import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -41,7 +38,7 @@ export default function Footer() {
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-white/10 hover:text-white transition-all duration-300"
                 aria-label="GitHub"
               >
-                <FaGithub size={18} />
+                <span className="material-symbols-outlined text-[18px]">code</span>
               </Link>
               <Link
                 href="https://www.linkedin.com/in/shihab-ahammed/"
@@ -49,7 +46,7 @@ export default function Footer() {
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#0a66c2]/20 hover:text-[#0a66c2] transition-all duration-300"
                 aria-label="LinkedIn"
               >
-                <FaLinkedin size={18} />
+                <span className="material-symbols-outlined text-[18px]">connect_without_contact</span>
               </Link>
               <Link
                 href="https://www.instagram.com/_laz_yyyy__/"
@@ -57,14 +54,14 @@ export default function Footer() {
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-[#E1306C]/20 hover:text-[#E1306C] transition-all duration-300"
                 aria-label="Instagram"
               >
-                <FaInstagram size={18} />
+                <span className="material-symbols-outlined text-[18px]">camera_alt</span>
               </Link>
               <Link
                 href="mailto:ahammedshihab15@gmail.com"
                 className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-primary-500/20 hover:text-primary-400 transition-all duration-300"
                 aria-label="Email"
               >
-                <Mail size={18} />
+                <span className="material-symbols-outlined text-[18px]">mail</span>
               </Link>
             </div>
           </div>

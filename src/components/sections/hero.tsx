@@ -1,114 +1,135 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { ArrowRight, Terminal } from "lucide-react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-[100dvh] flex items-center pt-28 pb-20 overflow-hidden">
-      <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-16">
-
-          {/* Photo — top on mobile, right on desktop */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, ease: [0.32, 0.72, 0, 1], delay: 0.15 }}
-            className="flex-shrink-0 order-first lg:order-last"
-          >
-            {/* Double-bezel frame */}
-            <div className="p-1.5 rounded-full bg-gradient-to-tr from-primary-600/60 via-secondary-500/40 to-primary-400/60 shadow-[0_0_60px_rgba(14,165,233,0.2)]">
-              <div className="p-1 rounded-full bg-background">
-                <div className="w-44 h-44 sm:w-60 sm:h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden relative group">
-                  <Image
-                    src="/profile.jpg"
-                    alt="Shihab Ahammed"
-                    fill
-                    className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-110"
-                    priority
-                  />
-                  {/* Inner vignette */}
-                  <div className="absolute inset-0 rounded-full shadow-[inset_0_0_40px_rgba(0,0,0,0.4)]" />
-                </div>
-              </div>
+    <section className="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl lg:py-24">
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+{/*  Left Column: Bio & Core Info  */}
+<div className="lg:col-span-7 flex flex-col items-start">
+{/*  System Boot Telemetry Pill  */}
+<div className="inline-flex items-center gap-space-sm px-3.5 py-1 rounded-full bg-surface-elevated/90 shadow-md backdrop-blur-md mb-space-lg">
+<span className="font-label-code text-label-code text-primary-container flex items-center gap-1.5">
+<span className="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            sys.boot("shihab_ahammed")
+          </span>
+<span className="text-surface-border">|</span>
+<span className="font-label-caps text-label-caps text-text-muted hidden sm:inline tracking-wider">SEC_KERNEL_v6.8_x86_64</span>
+</div>
+{/*  Headline  */}
+<h1 className="font-display-xl text-display-xl-mobile sm:text-display-xl text-on-surface font-bold tracking-tight mb-space-md">
+          Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-primary to-secondary">Shihab Ahammed</span>
+</h1>
+{/*  Subtitle Tags  */}
+<div className="flex flex-wrap items-center gap-2 mb-space-lg">
+<span className="font-label-code text-label-code px-3 py-1 rounded-full bg-surface-container-high text-primary">CS Student</span>
+<span className="text-surface-border font-label-code">·</span>
+<span className="font-label-code text-label-code px-3 py-1 rounded-full bg-surface-container-high text-secondary">Cybersecurity Enthusiast</span>
+<span className="text-surface-border font-label-code">·</span>
+<span className="font-label-code text-label-code px-3 py-1 rounded-full bg-surface-container-high text-primary-fixed">Linux User</span>
+<span className="text-surface-border font-label-code">·</span>
+<span className="font-label-code text-label-code px-3 py-1 rounded-full bg-surface-container-high text-tertiary">AI Explorer</span>
+</div>
+{/*  Lead Paragraph  */}
+<p className="font-body-lg text-body-lg text-text-muted max-w-2xl mb-space-xl leading-relaxed">
+          Passionate about cybersecurity, Linux, AI, and building secure systems. Currently studying Computer Science while exploring ethical hacking, C++, networking, and modern software development.
+        </p>
+{/*  CTA Action Buttons  */}
+<div className="flex flex-wrap items-center gap-space-md mb-space-xl">
+<a className="inline-flex items-center gap-2 px-space-lg py-3 rounded-xl bg-primary-container text-surface-obsidian font-label-code text-label-code font-bold shadow-lg shadow-primary-container/20 hover:shadow-primary-container/40 hover:-translate-y-0.5 transition-all" href="#projects">
+<span>View Projects</span>
+<span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a className="inline-flex items-center gap-2 px-space-lg py-3 rounded-xl bg-surface-elevated text-on-surface font-label-code text-label-code font-semibold shadow-md hover:bg-surface-container-high hover:text-primary transition-all" href="#contact">
+<span className="text-secondary font-bold">&gt;</span>
+<span>Contact Me</span>
+</a>
+</div>
+{/*  Social Bar  */}
+<div className="flex items-center gap-space-md pt-space-md">
+<span className="font-label-caps text-label-caps text-text-muted">UPLINK //</span>
+<a className="flex items-center gap-1.5 font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/ahammed-shihab" rel="noreferrer" target="_blank">
+<span className="material-symbols-outlined text-[16px]">terminal</span>
+<span>GitHub</span>
+</a>
+<span className="text-surface-border">/</span>
+<a className="flex items-center gap-1.5 font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/shihab-ahammed/" rel="noreferrer" target="_blank">
+<span className="material-symbols-outlined text-[16px]">link</span>
+<span>LinkedIn</span>
+</a>
+<span className="text-surface-border">/</span>
+<a className="flex items-center gap-1.5 font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/_laz_yyyy__/" rel="noreferrer" target="_blank">
+<span className="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Instagram</span>
+</a>
+</div>
+</div>
+{/*  Right Column: Interactive Terminal Widget + Visual Profile Avatar  */}
+<div className="lg:col-span-5 flex flex-col gap-space-md">
+{/*  Terminal Window Card  */}
+<div className="bg-surface-elevated/90 rounded-xl shadow-2xl overflow-hidden backdrop-blur-xl">
+{/*  Terminal Header Bar  */}
+<div className="bg-surface-container-highest px-space-md py-2.5 flex items-center justify-between">
+<div className="flex items-center gap-2">
+<span className="w-3 h-3 rounded-full bg-signal-crimson/80 inline-block"></span>
+<span className="w-3 h-3 rounded-full bg-terminal-amber/80 inline-block"></span>
+<span className="w-3 h-3 rounded-full bg-secondary/80 inline-block"></span>
+</div>
+<span className="font-label-code text-label-code text-text-muted text-xs">shihab@arch-station: ~</span>
+<div className="flex items-center gap-1 text-text-muted">
+<span className="material-symbols-outlined text-[14px]">lock</span>
+<span className="font-label-caps text-[10px]">TLS 1.3</span>
+</div>
+</div>
+{/*  Terminal Content Body  */}
+<div className="p-space-lg font-label-code text-label-code space-y-3 bg-surface-obsidian/70">
+<div className="flex items-center gap-2">
+<span className="text-secondary">$</span>
+<span className="text-primary-container">whoami</span>
+</div>
+<div className="text-on-surface pl-4 text-xs leading-relaxed">
+<span className="text-text-muted">User:</span> Shihab Ahammed<br/>
+<span className="text-text-muted">Role:</span> Computer Science Student &amp; Security Researcher<br/>
+<span className="text-text-muted">Institute:</span> Southeast University, Dhaka<br/>
+<span className="text-text-muted">OS:</span> Arch Linux x86_64 (Rolling)
             </div>
-          </motion.div>
-
-          {/* Text */}
-          <div className="max-w-2xl text-center lg:text-left">
-            <motion.span
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-              className="eyebrow mb-6 inline-flex"
-            >
-              <Terminal size={11} />
-              sys.boot(&quot;shihab_ahammed&quot;)
-            </motion.span>
-
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.1 }}
-              className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-5"
-            >
-              Hi, I&apos;m{" "}
-              <span className="text-gradient">Shihab Ahammed</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.2 }}
-              className="text-base md:text-lg text-gray-400 font-mono-accent mb-4"
-            >
-              CS Student &nbsp;·&nbsp; Cybersecurity Enthusiast &nbsp;·&nbsp; Linux User &nbsp;·&nbsp; AI Explorer
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.3 }}
-              className="text-gray-500 text-base leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0"
-            >
-              Passionate about cybersecurity, Linux, AI, and building secure systems. Currently studying Computer Science
-              while exploring ethical hacking, C++, networking, and modern software development.
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1], delay: 0.4 }}
-              className="flex flex-wrap justify-center lg:justify-start items-center gap-3"
-            >
-              {/* Primary CTA — Button-in-Button pattern */}
-              <Link
-                href="#projects"
-                className="group flex items-center gap-2 pl-6 pr-2 py-2 rounded-full bg-primary-600 hover:bg-primary-500 text-white text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] shadow-[0_0_24px_rgba(14,165,233,0.25)] hover:shadow-[0_0_36px_rgba(14,165,233,0.4)] active:scale-[0.98]"
-              >
-                View Projects
-                <span className="w-7 h-7 rounded-full bg-white/15 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-px">
-                  <ArrowRight size={14} />
-                </span>
-              </Link>
-
-              <Link
-                href="#contact"
-                className="px-6 py-2.5 rounded-full border border-white/10 text-gray-300 hover:text-white hover:border-white/25 hover:bg-white/5 text-sm font-semibold transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98]"
-              >
-                Contact Me
-              </Link>
-            </motion.div>
-          </div>
-
-        </div>
-      </div>
-
-      {/* Decorative orbs */}
-      <div aria-hidden="true" className="absolute right-0 top-1/3 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl pointer-events-none" />
-      <div aria-hidden="true" className="absolute left-0 bottom-0 w-64 h-64 bg-secondary-600/5 rounded-full blur-3xl pointer-events-none" />
-    </section>
+<div className="flex items-center gap-2 pt-1">
+<span className="text-secondary">$</span>
+<span className="text-primary-container">neofetch --telemetry</span>
+</div>
+<div className="bg-surface-container-lowest/90 p-space-sm rounded text-xs space-y-1 pl-4">
+<div className="flex justify-between"><span className="text-text-muted">KERNEL:</span> <span className="text-secondary">Linux 6.8.9-zen1-1-zen</span></div>
+<div className="flex justify-between"><span className="text-text-muted">UPTIME:</span> <span className="text-on-surface">14 days, 3 hours, 42 mins</span></div>
+<div className="flex justify-between"><span className="text-text-muted">PRIMARY TOOLS:</span> <span className="text-primary-fixed">Wireshark, Burp Suite, Nmap</span></div>
+<div className="flex justify-between"><span className="text-text-muted">AI ENGINE:</span> <span className="text-secondary">Ollama (Llama 3 / Mistral)</span></div>
+</div>
+<div className="flex items-center gap-2 pt-1">
+<span className="text-secondary">$</span>
+<span className="text-primary-container animate-pulse">ping -c 1 defensive_soc</span>
+<span className="w-2 h-4 bg-primary-container animate-pulse inline-block"></span>
+</div>
+</div>
+</div>
+{/*  Profile Meta Badge with Portrait Placeholder  */}
+<div className="p-space-md rounded-xl bg-surface-container/60 shadow-lg backdrop-blur-md flex items-center gap-space-md">
+<div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 shadow-[0_0_16px_rgba(0,242,254,0.3)]">
+<img className="w-full h-full object-cover" data-alt="Close-up portrait of Shihab Ahammed, a young South Asian computer science student and security enthusiast smiling warmly indoors wearing glasses and a smart casual patterned shirt, surrounded by deep moody obsidian and cyan ambient screen reflections, tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_h2MAHZPjde-hCDhyqmWg6mtwnUpbo9aE4YPPy3auBJ0xCsBem3a82q6PZ0dyWCaQR7vDacCZDMR-lZV4rHNlW9cGJy8c9Ftwsmuw1u7koaY4bmAW0Z5T-3qviXa-nxdreXsUyVa2Ki022lp9irCyWyo6Q6BaY85qVKS2c7kPJn6Q5B7z43NmNm4mNW2sSiQ1AIR9T9R9LC3RtKgdXyDqG5fRzb3qn_gb2vDCcJ9hmeNoJGH6jnmh"/>
+</div>
+<div className="min-w-0 flex-1">
+<div className="flex items-center justify-between gap-2">
+<span className="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Shihab Ahammed</span>
+<span className="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary">ACTIVE</span>
+</div>
+<p className="font-label-code text-label-code text-text-muted truncate">Dhaka, Bangladesh · GMT +6</p>
+<div className="mt-1 flex items-center gap-2 text-xs text-text-muted">
+<span className="inline-block w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span className="font-label-caps text-[10px] text-primary">AVAILABLE FOR SECURITY INTERNSHIPS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
   );
 }

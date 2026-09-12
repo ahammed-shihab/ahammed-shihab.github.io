@@ -1,156 +1,138 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { GraduationCap, Briefcase, Calendar, MapPin } from "lucide-react";
-import SectionHeading from "@/components/section-heading";
-import { useRef } from "react";
-
-const timeline = [
-  {
-    type: "education",
-    title: "B.Sc. in Computer Science & Engineering",
-    organization: "Southeast University",
-    location: "Dhaka, Bangladesh",
-    date: "Expected Graduation: Present",
-    description:
-      "Building a strong foundation in computer science principles, data structures, algorithms, and software engineering. Exploring cybersecurity and Linux as specialized interests.",
-    icon: <GraduationCap size={18} />,
-  },
-  {
-    type: "experience",
-    title: "ICT Tutor",
-    organization: "Freelance",
-    location: "Dhaka, Bangladesh",
-    date: "Part-time",
-    description:
-      "Provided part-time ICT tutoring, helping students understand computer science fundamentals and basic programming concepts.",
-    icon: <Briefcase size={18} />,
-  },
-];
-
-const journey = [
-  "Started Programming",
-  "Learned Linux",
-  "Switched to Arch Linux",
-  "Started Cybersecurity",
-  "Learning AI",
-  "Building Real-world Projects",
-];
-
-function SpotlightCard({
-  children,
-  className = "",
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!ref.current) return;
-    const rect = ref.current.getBoundingClientRect();
-    ref.current.style.setProperty("--mx", `${e.clientX - rect.left}px`);
-    ref.current.style.setProperty("--my", `${e.clientY - rect.top}px`);
-  };
-
-  return (
-    <div
-      ref={ref}
-      onMouseMove={handleMouseMove}
-      className={`glass-card spotlight ${className}`}
-    >
-      {children}
-    </div>
-  );
-}
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Experience() {
   return (
-    <section id="experience" className="section relative">
-      <div className="container mx-auto px-6 md:px-12">
-        <SectionHeading
-          title="Education & Experience"
-          subtitle="My academic background and professional journey so far."
-          eyebrow="Timeline"
-        />
-
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Main timeline */}
-          <div className="lg:col-span-8">
-            <div className="relative space-y-10 before:absolute before:inset-0 before:ml-6 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-px before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
-              {timeline.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: index * 0.1, ease: [0.32, 0.72, 0, 1] }}
-                  className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active"
-                >
-                  {/* Icon Node */}
-                  <div className="flex items-center justify-center w-12 h-12 rounded-full border-4 border-[#080808] bg-[#0f1117] text-white shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_0_1px_rgba(255,255,255,0.1)] group-hover:bg-primary-500 group-hover:text-[#080808] group-hover:shadow-[0_0_20px_rgba(14,165,233,0.3)] transition-all duration-300 z-10 ml-0 md:ml-0">
-                    {item.icon}
-                  </div>
-
-                  {/* Card Content */}
-                  <SpotlightCard className="w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 md:p-8 ml-6 md:ml-0">
-                    <div className="flex flex-col gap-2 mb-4">
-                      <h3 className="text-xl font-bold text-white leading-tight">
-                        {item.title}
-                      </h3>
-                      <div className="font-mono-accent text-primary-400 font-medium">
-                        {item.organization}
-                      </div>
-                    </div>
-
-                    <div className="flex flex-col gap-2 text-xs font-mono text-gray-500 mb-5">
-                      <div className="flex items-center gap-2">
-                        <Calendar size={14} />
-                        <span>{item.date}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin size={14} />
-                        <span>{item.location}</span>
-                      </div>
-                    </div>
-
-                    <p className="text-gray-400 text-sm leading-relaxed">
-                      {item.description}
-                    </p>
-                  </SpotlightCard>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Sidebar Journey */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
-            className="lg:col-span-4"
-          >
-            <div className="sticky top-28">
-              <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-[0.15em] mb-8 border-b border-white/10 pb-4">
-                Learning Journey
+    <section className="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl" id="experience">
+{/*  Section Kicker Header  */}
+<div className="text-center max-w-2xl mx-auto mb-space-xl">
+<div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-label-caps text-label-caps text-primary-container mb-space-sm">
+<span className="material-symbols-outlined text-[14px]">history_edu</span>
+<span>// 04. EXPERIENCE &amp; JOURNEY</span>
+</div>
+<h2 className="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs">Education &amp; Experience</h2>
+<p className="font-body-md text-body-md text-text-muted">My academic background and professional journey so far.</p>
+</div>
+{/*  Timeline Grid: Main Tracks vs Learning Milestones  */}
+<div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+{/*  Left Track: Academic & Teaching Experience  */}
+<div className="lg:col-span-7 flex flex-col gap-space-lg relative">
+{/*  Experience Card 1: Degree  */}
+<div className="relative pl-8 sm:pl-10">
+<div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span className="material-symbols-outlined text-[14px]">school</span>
+</div>
+<div className="p-space-lg rounded-xl bg-surface-elevated/70 shadow-lg">
+<div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+<h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                B.Sc. in Computer Science &amp; Engineering
               </h3>
-              <div className="space-y-6">
-                {journey.map((step, index) => (
-                  <div key={index} className="flex items-center gap-4 group">
-                    <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 text-xs font-mono font-bold group-hover:bg-secondary-500/10 group-hover:text-secondary-400 group-hover:border-secondary-500/20 transition-all duration-300">
-                      0{index + 1}
-                    </div>
-                    <div className="text-gray-400 text-sm font-medium group-hover:text-white transition-colors duration-300">
-                      {step}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-    </section>
+<span className="font-label-caps text-label-caps px-2 py-0.5 rounded bg-primary-container/20 text-primary-container">CURRENT</span>
+</div>
+<div className="font-label-code text-label-code text-primary-fixed mb-space-sm">Southeast University</div>
+<div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-label-caps text-label-caps text-text-muted mb-space-md">
+<span className="flex items-center gap-1">
+<span className="material-symbols-outlined text-[14px]">calendar_month</span>
+<span>Expected Graduation: Present</span>
+</span>
+<span className="flex items-center gap-1">
+<span className="material-symbols-outlined text-[14px]">location_on</span>
+<span>Dhaka, Bangladesh</span>
+</span>
+</div>
+<p className="font-body-md text-body-md text-text-muted leading-relaxed">
+              Building a strong foundation in computer science principles, data structures, algorithms, and software engineering. Exploring cybersecurity and Linux as specialized interests.
+            </p>
+</div>
+</div>
+{/*  Experience Card 2: ICT Tutor  */}
+<div className="relative pl-8 sm:pl-10">
+<div className="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span className="material-symbols-outlined text-[14px]">cast_for_education</span>
+</div>
+<div className="p-space-lg rounded-xl bg-surface-elevated/70 shadow-lg">
+<div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+<h3 className="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                ICT Tutor
+              </h3>
+<span className="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container text-text-muted">PART-TIME</span>
+</div>
+<div className="font-label-code text-label-code text-secondary mb-space-sm">Freelance</div>
+<div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-label-caps text-label-caps text-text-muted mb-space-md">
+<span className="flex items-center gap-1">
+<span className="material-symbols-outlined text-[14px]">schedule</span>
+<span>Part-time</span>
+</span>
+<span className="flex items-center gap-1">
+<span className="material-symbols-outlined text-[14px]">location_on</span>
+<span>Dhaka, Bangladesh</span>
+</span>
+</div>
+<p className="font-body-md text-body-md text-text-muted leading-relaxed">
+              Provided part-time ICT tutoring, helping students understand computer science fundamentals and basic programming concepts.
+            </p>
+</div>
+</div>
+</div>
+{/*  Right Track: Learning Journey Chronology (Steps 01-06)  */}
+<div className="lg:col-span-5 p-space-xl rounded-xl bg-surface-container/40 shadow-lg">
+<div className="flex items-center justify-between mb-space-lg">
+<h3 className="font-headline-sm text-headline-sm text-on-surface font-bold">Learning Journey</h3>
+<span className="font-label-caps text-label-caps text-text-muted">EVOLUTION</span>
+</div>
+<div className="flex flex-col gap-space-md">
+{/*  Step 01  */}
+<div className="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span className="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-primary-container font-bold shrink-0">01</span>
+<div className="min-w-0">
+<div className="font-label-code text-label-code text-on-surface font-medium">Started Programming</div>
+<div className="font-label-caps text-[10px] text-text-muted">C++ &amp; CORE FOUNDATIONS</div>
+</div>
+</div>
+{/*  Step 02  */}
+<div className="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span className="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-primary-container font-bold shrink-0">02</span>
+<div className="min-w-0">
+<div className="font-label-code text-label-code text-on-surface font-medium">Learned Linux</div>
+<div className="font-label-caps text-[10px] text-text-muted">BASH SCRIPTING &amp; SYSADMIN</div>
+</div>
+</div>
+{/*  Step 03  */}
+<div className="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span className="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-secondary font-bold shrink-0">03</span>
+<div className="min-w-0">
+<div className="font-label-code text-label-code text-on-surface font-medium">Switched to Arch Linux</div>
+<div className="font-label-caps text-[10px] text-text-muted">CUSTOM ENVIRONMENT &amp; RICING</div>
+</div>
+</div>
+{/*  Step 04  */}
+<div className="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span className="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-secondary font-bold shrink-0">04</span>
+<div className="min-w-0">
+<div className="font-label-code text-label-code text-on-surface font-medium">Started Cybersecurity</div>
+<div className="font-label-caps text-[10px] text-text-muted">CTFS, WIRESHARK &amp; OWASP</div>
+</div>
+</div>
+{/*  Step 05  */}
+<div className="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span className="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-primary-fixed font-bold shrink-0">05</span>
+<div className="min-w-0">
+<div className="font-label-code text-label-code text-on-surface font-medium">Learning AI</div>
+<div className="font-label-caps text-[10px] text-text-muted">LOCAL LLMS WITH OLLAMA</div>
+</div>
+</div>
+{/*  Step 06  */}
+<div className="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span className="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-primary-container font-bold shrink-0">06</span>
+<div className="min-w-0">
+<div className="font-label-code text-label-code text-on-surface font-medium">Building Real-world Projects</div>
+<div className="font-label-caps text-[10px] text-text-muted">END-TO-END SECURE APPLICATIONS</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
   );
 }
