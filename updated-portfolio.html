@@ -1,0 +1,977 @@
+<USER_REQUEST>
+Mrkdown:
+name: Obsidian Cybernetic
+colors:
+surface: '#10141a'
+surface-dim: '#10141a'
+surface-bright: '#353940'
+surface-container-lowest: '#0a0e14'
+surface-container-low: '#181c22'
+surface-container: '#1c2026'
+surface-container-high: '#262a31'
+surface-container-highest: '#31353c'
+on-surface: '#dfe2eb'
+on-surface-variant: '#b9cacb'
+inverse-surface: '#dfe2eb'
+inverse-on-surface: '#2d3137'
+outline: '#849495'
+outline-variant: '#3a494b'
+surface-tint: '#00dce6'
+primary: '#e0fdff'
+on-primary: '#00373a'
+primary-container: '#00f2fe'
+on-primary-container: '#006a70'
+inverse-primary: '#00696f'
+secondary: '#4edea3'
+on-secondary: '#003824'
+secondary-container: '#00a572'
+on-secondary-container: '#00311f'
+tertiary: '#f1f8ff'
+on-tertiary: '#00354a'
+tertiary-container: '#b2e1ff'
+on-tertiary-container: '#00678c'
+error: '#ffb4ab'
+on-error: '#690005'
+error-container: '#93000a'
+on-error-container: '#ffdad6'
+primary-fixed: '#6ff6ff'
+primary-fixed-dim: '#00dce6'
+on-primary-fixed: '#002022'
+on-primary-fixed-variant: '#004f53'
+secondary-fixed: '#6ffbbe'
+secondary-fixed-dim: '#4edea3'
+on-secondary-fixed: '#002113'
+on-secondary-fixed-variant: '#005236'
+tertiary-fixed: '#c4e7ff'
+tertiary-fixed-dim: '#7bd0ff'
+on-tertiary-fixed: '#001e2c'
+on-tertiary-fixed-variant: '#004c69'
+background: '#10141a'
+on-background: '#dfe2eb'
+surface-variant: '#31353c'
+surface-obsidian: '#090D16'
+surface-elevated: '#161B22'
+surface-border: '#30363D'
+text-muted: '#8B949E'
+terminal-amber: '#F59E0B'
+signal-crimson: '#EF4444'
+typography:
+display-xl:
+fontFamily: Geist
+fontSize: 56px
+fontWeight: '700'
+lineHeight: 64px
+letterSpacing: -0.04em
+display-xl-mobile:
+fontFamily: Geist
+fontSize: 36px
+fontWeight: '700'
+lineHeight: 44px
+letterSpacing: -0.03em
+headline-lg:
+fontFamily: Geist
+fontSize: 32px
+fontWeight: '600'
+lineHeight: 40px
+letterSpacing: -0.03em
+headline-md:
+fontFamily: Geist
+fontSize: 24px
+fontWeight: '600'
+lineHeight: 32px
+letterSpacing: -0.02em
+headline-sm:
+fontFamily: Geist
+fontSize: 20px
+fontWeight: '600'
+lineHeight: 28px
+letterSpacing: -0.01em
+body-lg:
+fontFamily: Geist
+fontSize: 16px
+fontWeight: '400'
+lineHeight: 26px
+body-md:
+fontFamily: Geist
+fontSize: 14px
+fontWeight: '400'
+lineHeight: 22px
+label-code:
+fontFamily: JetBrains Mono
+fontSize: 13px
+fontWeight: '500'
+lineHeight: 18px
+letterSpacing: -0.01em
+label-caps:
+fontFamily: JetBrains Mono
+fontSize: 11px
+fontWeight: '600'
+lineHeight: 16px
+letterSpacing: 0.08em
+rounded:
+sm: 0.125rem
+DEFAULT: 0.25rem
+md: 0.375rem
+lg: 0.5rem
+xl: 0.75rem
+full: 9999px
+spacing:
+gutter: 1.5rem
+gutter-sm: 1rem
+margin: 2rem
+margin-sm: 1.25rem
+space-xs: 0.25rem
+space-sm: 0.5rem
+space-md: 1rem
+space-lg: 1.5rem
+space-xl: 2.5rem
+Brand & Style
+This design system establishes a hyper-refined, engineering-grade digital environment engineered for elite software developers and cybersecurity specialists. Inspired by the precision ergonomics of developer platforms like Linear, Vercel, and Raycast, the aesthetic balances deep atmospheric darkness with luminescent technical accents.
+The mood conveys surgical rigor, silent confidence, and high cognitive clarity. Visual artifacts mimic modern developer tooling: 1px micro-borders, subtle telemetry indicators, monospaced terminal badges, and low-opacity frosted glass layers that establish tactile depth without visual clutter.
+Colors
+The foundation is built on deep obsidian tones (#090D16 and #0D1117), preventing eye strain during prolonged sessions while providing high contrast for analytical content.
+Primary (#00F2FE / Electric Cyan): Used for focal interactive states, primary action buttons, key metrics, and glowing border highlights.
+Secondary (#10B981 / Cyber Emerald): Signals system health, verified security milestones, live CTF statuses, and active git branch telemetry.
+Tertiary (#38BDF8 / Sky Cyan): Bridges textual hierarchy and navigational metadata.
+Neutral Surface Palette: Layers dark charcoal tones (#090D16 base, #0D1117 containers, #161B22 elevated cards) bounded by crisp, low-opacity strokes (#30363D).
+Typography
+The typographic pairing reflects dual engineering paradigms: Geist delivers crisp, legible, and compact geometric clarity for editorial narratives and interfaces, while JetBrains Mono provides rigid structure for code blocks, commit hashes, path indicators, and diagnostic telemetry.
+Letter tracking is tightly kerned on display headlines to reinforce a dense, modern software tool feel, while body copy maintains generous vertical leading (lineHeight: 26px on 16px body) to maximize technical readability.
+Layout & Spacing
+The system leverages a strict 12-column fluid grid bound to a maximum viewport constraint of 1280px for standard pages, and 1024px for focused developer profiles or log feeds.
+Vertical cadence relies on an 8px base grid. Structural sections are divided by generous space-xl intervals or 1px hairline boundary dividers rather than heavy backgrounds. Breakpoints scale across three responsive boundaries:
+Desktop (≥ 1024px): 12-column grid, gutter: 1.5rem, margin: 2rem.
+Tablet (768px – 1023px): 8-column grid, gutter: 1rem, margin: 1.5rem.
+Mobile (< 768px): 4-column reflow, gutter: 1rem, margin: 1.25rem.
+Elevation & Depth
+Spatial hierarchy does not rely on traditional muddy drop shadows. Instead, it employs optical illumination, dark surface tiers, and frosted micro-borders:
+Surface 0 (Canvas): #090D16 baseline backplane.
+Surface 1 (Card/Container): #0D1117 at 70% opacity backed by backdrop-filter: blur(12px) and bordered by a 1px solid stroke of #30363D.
+Surface 2 (Elevated Overlays & Modals): #161B22 with a subtle top-edge gradient highlight (linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 100%)).
+Interactive Luminescence: When a card or module receives focus or hover, the border transitions from #30363D to #00F2FE (or #10B981) paired with an ambient glow (box-shadow: 0 0 24px -4px rgba(0, 242, 254, 0.15)).
+Shapes
+The design system standardizes on a precise, soft geometry (roundedness: 1).
+Cards, code blocks, and dialog panels utilize 0.5rem (8px) corners to balance architectural rigor with modern software softness. Interactive telemetry chips, status indicators, and pill buttons utilize fully rounded ends (9999px) to communicate modular tactility and distinct interactive affordance.
+Components
+Buttons
+Primary Cyber: Neon cyan fill (#00F2FE), dark obsidian text (#090D16), semi-bold weight. On hover: mild outer bloom (box-shadow: 0 0 16px rgba(0, 242, 254, 0.4)) and a 1px upward translateY.
+Secondary Ghost: Glass fill (rgba(22, 27, 34, 0.6)), 1px border (#30363D), white text. On hover: border brightens to #8B949E with background shifted to #161B22.
+Terminal Action: Monospaced label flanked by command prompts ($ run_project), minimal background, active cyan border.
+Badges & Chips
+Fully radiused pill badges (height: 24px, padding 0.25rem 0.75rem).
+Features a glowing micro-dot (4px circle) displaying status: pulsing emerald (#10B981) for active/online/verified, cyan (#00F2FE) for current research, amber (#F59E0B) for WIP.
+Cards & Repositories
+Structured with a header bar featuring terminal traffic lights (three subtle 8px dots) or file directory metadata (~/cybersecurity/network-tools).
+Bounded by a 1px border with a gradual radial gradient revealing an electric cyan highlight following cursor position.
+Inputs & Terminal Fields
+Dark input fields (#0D1117) with inset hairline borders (#30363D).
+Focused state applies an immediate cyan ring (border-color: #00F2FE, box-shadow: 0 0 0 1px #00F2FE).
+Monospace helper prefixes (e.g., shihab@arch:~$) rendered in muted gray (#8B949E).
+
+
+html:
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-secondary-fixed-variant":"#005236","text-muted":"#8B949E","on-secondary-fixed":"#002113","signal-crimson":"#EF4444","error":"#ffb4ab","primary-fixed-dim":"#00dce6","secondary-fixed-dim":"#4edea3","on-secondary":"#003824","surface-dim":"#10141a","on-surface-variant":"#b9cacb","on-primary":"#00373a","on-error-container":"#ffdad6","secondary-container":"#00a572","on-error":"#690005","inverse-surface":"#dfe2eb","secondary":"#4edea3","on-tertiary-fixed-variant":"#004c69","error-container":"#93000a","tertiary-fixed":"#c4e7ff","background":"#10141a","surface-variant":"#31353c","inverse-primary":"#00696f","on-primary-fixed-variant":"#004f53","surface-container-low":"#181c22","inverse-on-surface":"#2d3137","surface-container-highest":"#31353c","primary":"#e0fdff","surface-obsidian":"#090D16","secondary-fixed":"#6ffbbe","tertiary":"#f1f8ff","on-tertiary":"#00354a","on-background":"#dfe2eb","surface-container-lowest":"#0a0e14","surface":"#10141a","on-primary-container":"#006a70","surface-border":"#30363D","outline":"#849495","on-surface":"#dfe2eb","on-secondary-container":"#00311f","on-primary-fixed":"#002022","terminal-amber":"#F59E0B","on-tertiary-container":"#00678c","outline-variant":"#3a494b","surface-tint":"#00dce6","tertiary-container":"#b2e1ff","surface-bright":"#353940","surface-elevated":"#161B22","surface-container":"#1c2026","surface-container-high":"#262a31","on-tertiary-fixed":"#001e2c","primary-fixed":"#6ff6ff","tertiary-fixed-dim":"#7bd0ff","primary-container":"#00f2fe"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-lg":"1.5rem","space-xs":"0.25rem","space-sm":"0.5rem","gutter-sm":"1rem","margin-sm":"1.25rem","margin":"2rem","space-md":"1rem","gutter":"1.5rem","space-xl":"2.5rem"},"fontFamily":{"label-caps":["JetBrains Mono"],"headline-md":["Geist"],"label-code":["JetBrains Mono"],"body-lg":["Geist"],"headline-sm":["Geist"],"body-md":["Geist"],"display-xl":["Geist"],"display-xl-mobile":["Geist"],"headline-lg":["Geist"]},"fontSize":{"label-caps":["11px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-code":["13px",{"lineHeight":"18px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-lg":["16px",{"lineHeight":"26px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["14px",{"lineHeight":"22px","fontWeight":"400"}],"display-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.04em","fontWeight":"700"}],"display-xl-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.03em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface-obsidian font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-surface-obsidian"><header class="fixed top-0 left-0 w-full z-50 bg-surface-obsidian/85 backdrop-blur-xl border-b border-surface-border"><div class="h-16 max-w-[1280px] mx-auto px-margin-sm md:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><a class="flex items-center gap-space-xs font-label-code text-label-code text-primary hover:text-primary-container transition-colors" href="#"><span class="text-secondary">shihab</span><span class="text-outline-variant">@</span><span class="text-primary-container">sec</span><span class="text-text-muted">:~$</span></a><div class="hidden sm:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-low border border-surface-border"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-label-caps text-label-caps text-secondary">OP_READY // HIRE &amp; CTF</span></div></div><nav class="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#about">About</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="skills" href="#skills">Skills</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#projects">Projects</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="experience" href="#experience">Experience</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="writing" href="#writing">Writing</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#contact">Contact</a></nav><div class="flex items-center gap-space-sm"><a aria-label="GitHub Repository" class="w-8 h-8 rounded-lg border border-surface-border bg-surface-elevated/60 hover:bg-surface-elevated hover:text-on-surface text-on-surface-variant flex items-center justify-center transition-all" href="https://github.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">code</span></a><a aria-label="LinkedIn Network" class="w-8 h-8 rounded-lg border border-surface-border bg-surface-elevated/60 hover:bg-surface-elevated hover:text-on-surface text-on-surface-variant flex items-center justify-center transition-all" href="https://linkedin.com" rel="noreferrer" target="_blank"><span class="material-symbols-outlined text-[18px]">terminal</span></a><a class="hidden md:inline-flex items-center px-space-md py-1.5 rounded-lg bg-primary-container text-surface-obsidian font-label-code text-label-code font-bold hover:shadow-[0_0_16px_rgba(0,242,254,0.35)] transition-all" href="#contact">Get in Touch</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface-obsidian"><div class="flex flex-col w-full relative">
+<!-- Subtle cyber glow backdrop layers -->
+<div class="absolute top-12 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-b from-primary-container/10 via-secondary/5 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-[1200px] -left-48 w-[500px] h-[500px] bg-primary-fixed-dim/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-[2400px] -right-48 w-[500px] h-[500px] bg-secondary-container/5 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- ========================================================================= -->
+<!-- 01. HERO SECTION                                                          -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl lg:py-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Bio & Core Info -->
+<div class="lg:col-span-7 flex flex-col items-start">
+<!-- System Boot Telemetry Pill -->
+<div class="inline-flex items-center gap-space-sm px-3.5 py-1 rounded-full bg-surface-elevated/90 shadow-md backdrop-blur-md mb-space-lg">
+<span class="font-label-code text-label-code text-primary-container flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+            sys.boot("shihab_ahammed")
+          </span>
+<span class="text-surface-border">|</span>
+<span class="font-label-caps text-label-caps text-text-muted hidden sm:inline tracking-wider">SEC_KERNEL_v6.8_x86_64</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-xl text-display-xl-mobile sm:text-display-xl text-on-surface font-bold tracking-tight mb-space-md">
+          Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-primary to-secondary">Shihab Ahammed</span>
+</h1>
+<!-- Subtitle Tags -->
+<div class="flex flex-wrap items-center gap-2 mb-space-lg">
+<span class="font-label-code text-label-code px-3 py-1 rounded-full bg-surface-container-high text-primary">CS Student</span>
+<span class="text-surface-border font-label-code">·</span>
+<span class="font-label-code text-label-code px-3 py-1 rounded-full bg-surface-container-high text-secondary">Cybersecurity Enthusiast</span>
+<span class="text-surface-border font-label-code">·</span>
+<span class="font-label-code text-label-code px-3 py-1 rounded-full bg-surface-container-high text-primary-fixed">Linux User</span>
+<span class="text-surface-border font-label-code">·</span>
+<span class="font-label-code text-label-code px-3 py-1 rounded-full bg-surface-container-high text-tertiary">AI Explorer</span>
+</div>
+<!-- Lead Paragraph -->
+<p class="font-body-lg text-body-lg text-text-muted max-w-2xl mb-space-xl leading-relaxed">
+          Passionate about cybersecurity, Linux, AI, and building secure systems. Currently studying Computer Science while exploring ethical hacking, C++, networking, and modern software development.
+        </p>
+<!-- CTA Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-md mb-space-xl">
+<a class="inline-flex items-center gap-2 px-space-lg py-3 rounded-xl bg-primary-container text-surface-obsidian font-label-code text-label-code font-bold shadow-lg shadow-primary-container/20 hover:shadow-primary-container/40 hover:-translate-y-0.5 transition-all" href="#projects">
+<span>View Projects</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-space-lg py-3 rounded-xl bg-surface-elevated text-on-surface font-label-code text-label-code font-semibold shadow-md hover:bg-surface-container-high hover:text-primary transition-all" href="#contact">
+<span class="text-secondary font-bold">&gt;</span>
+<span>Contact Me</span>
+</a>
+</div>
+<!-- Social Bar -->
+<div class="flex items-center gap-space-md pt-space-md">
+<span class="font-label-caps text-label-caps text-text-muted">UPLINK //</span>
+<a class="flex items-center gap-1.5 font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/ahammed-shihab" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>GitHub</span>
+</a>
+<span class="text-surface-border">/</span>
+<a class="flex items-center gap-1.5 font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/shihab-ahammed/" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">link</span>
+<span>LinkedIn</span>
+</a>
+<span class="text-surface-border">/</span>
+<a class="flex items-center gap-1.5 font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="https://www.instagram.com/_laz_yyyy__/" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">photo_camera</span>
+<span>Instagram</span>
+</a>
+</div>
+</div>
+<!-- Right Column: Interactive Terminal Widget + Visual Profile Avatar -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Terminal Window Card -->
+<div class="bg-surface-elevated/90 rounded-xl shadow-2xl overflow-hidden backdrop-blur-xl">
+<!-- Terminal Header Bar -->
+<div class="bg-surface-container-highest px-space-md py-2.5 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-signal-crimson/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-terminal-amber/80 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-secondary/80 inline-block"></span>
+</div>
+<span class="font-label-code text-label-code text-text-muted text-xs">shihab@arch-station: ~</span>
+<div class="flex items-center gap-1 text-text-muted">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span class="font-label-caps text-[10px]">TLS 1.3</span>
+</div>
+</div>
+<!-- Terminal Content Body -->
+<div class="p-space-lg font-label-code text-label-code space-y-3 bg-surface-obsidian/70">
+<div class="flex items-center gap-2">
+<span class="text-secondary">$</span>
+<span class="text-primary-container">whoami</span>
+</div>
+<div class="text-on-surface pl-4 text-xs leading-relaxed">
+<span class="text-text-muted">User:</span> Shihab Ahammed<br/>
+<span class="text-text-muted">Role:</span> Computer Science Student &amp; Security Researcher<br/>
+<span class="text-text-muted">Institute:</span> Southeast University, Dhaka<br/>
+<span class="text-text-muted">OS:</span> Arch Linux x86_64 (Rolling)
+            </div>
+<div class="flex items-center gap-2 pt-1">
+<span class="text-secondary">$</span>
+<span class="text-primary-container">neofetch --telemetry</span>
+</div>
+<div class="bg-surface-container-lowest/90 p-space-sm rounded text-xs space-y-1 pl-4">
+<div class="flex justify-between"><span class="text-text-muted">KERNEL:</span> <span class="text-secondary">Linux 6.8.9-zen1-1-zen</span></div>
+<div class="flex justify-between"><span class="text-text-muted">UPTIME:</span> <span class="text-on-surface">14 days, 3 hours, 42 mins</span></div>
+<div class="flex justify-between"><span class="text-text-muted">PRIMARY TOOLS:</span> <span class="text-primary-fixed">Wireshark, Burp Suite, Nmap</span></div>
+<div class="flex justify-between"><span class="text-text-muted">AI ENGINE:</span> <span class="text-secondary">Ollama (Llama 3 / Mistral)</span></div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="text-secondary">$</span>
+<span class="text-primary-container animate-pulse">ping -c 1 defensive_soc</span>
+<span class="w-2 h-4 bg-primary-container animate-pulse inline-block"></span>
+</div>
+</div>
+</div>
+<!-- Profile Meta Badge with Portrait Placeholder -->
+<div class="p-space-md rounded-xl bg-surface-container/60 shadow-lg backdrop-blur-md flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 shadow-[0_0_16px_rgba(0,242,254,0.3)]">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of Shihab Ahammed, a young South Asian computer science student and security enthusiast smiling warmly indoors wearing glasses and a smart casual patterned shirt, surrounded by deep moody obsidian and cyan ambient screen reflections, tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_h2MAHZPjde-hCDhyqmWg6mtwnUpbo9aE4YPPy3auBJ0xCsBem3a82q6PZ0dyWCaQR7vDacCZDMR-lZV4rHNlW9cGJy8c9Ftwsmuw1u7koaY4bmAW0Z5T-3qviXa-nxdreXsUyVa2Ki022lp9irCyWyo6Q6BaY85qVKS2c7kPJn6Q5B7z43NmNm4mNW2sSiQ1AIR9T9R9LC3RtKgdXyDqG5fRzb3qn_gb2vDCcJ9hmeNoJGH6jnmh"/>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center justify-between gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">Shihab Ahammed</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary">ACTIVE</span>
+</div>
+<p class="font-label-code text-label-code text-text-muted truncate">Dhaka, Bangladesh · GMT +6</p>
+<div class="mt-1 flex items-center gap-2 text-xs text-text-muted">
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-primary-container animate-ping"></span>
+<span class="font-label-caps text-[10px] text-primary">AVAILABLE FOR SECURITY INTERNSHIPS</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 02. ABOUT ME SECTION                                                      -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl" id="about">
+<!-- Section Kicker Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-label-caps text-label-caps text-primary-container mb-space-sm">
+<span class="material-symbols-outlined text-[14px]">terminal</span>
+<span>// 01. ABOUT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs">About me</h2>
+<p class="font-body-md text-body-md text-text-muted">Get to know me better and see what drives my passion for technology.</p>
+</div>
+<!-- Main About Content: Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Bio Longform Narrative Card -->
+<div class="lg:col-span-6 p-space-xl rounded-xl bg-surface-elevated/70 shadow-xl backdrop-blur-md flex flex-col gap-space-md leading-relaxed">
+<div class="flex items-center gap-2 font-label-code text-label-code text-secondary mb-1">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>ROOT_NARRATIVE</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface">
+          Hello — I'm <strong class="text-primary-container font-semibold">Shihab Ahammed</strong>, a motivated Computer Science student based in Dhaka, Bangladesh, currently studying at Southeast University.
+        </p>
+<p class="font-body-md text-body-md text-text-muted">
+          My journey into technology began with a deep curiosity about how systems work. This led me to explore Linux, transitioning from standard desktop environments to advanced dual-boot setups and customizing Arch Linux to fit my workflow perfectly.
+        </p>
+<p class="font-body-md text-body-md text-text-muted">
+          I have a strong passion for <strong class="text-secondary font-semibold">Cybersecurity</strong>. I spend my time understanding networking protocols, learning ethical hacking fundamentals, and solving Capture The Flag (CTF) challenges to hone my skills.
+        </p>
+<p class="font-body-md text-body-md text-text-muted">
+          When I'm not studying or hacking away in the terminal, I enjoy playing video games, exploring new AI tools, and tutoring others in ICT.
+        </p>
+<div class="pt-space-sm flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-code text-xs text-on-surface-variant">Southeast University</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-code text-xs text-on-surface-variant">Dhaka, Bangladesh</span>
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-code text-xs text-on-surface-variant">Arch / Kali / Fedora</span>
+</div>
+</div>
+<!-- 4 Pillars Feature Cards Grid -->
+<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Feature 1: Linux Enthusiast -->
+<div class="p-space-lg rounded-xl bg-surface-container/60 hover:bg-surface-elevated shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:scale-110 transition-transform mb-space-md">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Linux enthusiast</h3>
+<p class="font-body-md text-body-md text-text-muted">Customizing and working heavily within Linux environments — Arch, Fedora, Kali.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 font-label-caps text-label-caps text-primary-fixed-dim">
+<span>KERNEL ARCHITECTURE</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Feature 2: Cybersecurity -->
+<div class="p-space-lg rounded-xl bg-surface-container/60 hover:bg-surface-elevated shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-110 transition-transform mb-space-md">
+<span class="material-symbols-outlined text-[24px]">shield</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Cybersecurity</h3>
+<p class="font-body-md text-body-md text-text-muted">Learning ethical hacking, networking, and participating in CTF challenges.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 font-label-caps text-label-caps text-secondary">
+<span>OFFENSIVE &amp; DEFENSIVE</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Feature 3: Software Dev -->
+<div class="p-space-lg rounded-xl bg-surface-container/60 hover:bg-surface-elevated shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-110 transition-transform mb-space-md">
+<span class="material-symbols-outlined text-[24px]">code</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Software dev</h3>
+<p class="font-body-md text-body-md text-text-muted">Writing code in C++, Python, and building full-stack applications.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 font-label-caps text-label-caps text-primary">
+<span>FULL STACK SYSTEMS</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+<!-- Feature 4: AI Explorer -->
+<div class="p-space-lg rounded-xl bg-surface-container/60 hover:bg-surface-elevated shadow-md transition-all group flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary-fixed-dim group-hover:scale-110 transition-transform mb-space-md">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">AI explorer</h3>
+<p class="font-body-md text-body-md text-text-muted">Fascinated by LLMs, Ollama, and integrating AI into daily workflows.</p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center gap-1 font-label-caps text-label-caps text-tertiary-fixed-dim">
+<span>LOCAL LLMS &amp; AGENTS</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 03. TECHNICAL SKILLS SECTION                                              -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl" id="skills">
+<!-- Section Kicker Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-label-caps text-label-caps text-primary-container mb-space-sm">
+<span class="material-symbols-outlined text-[14px]">memory</span>
+<span>// 02. STACK &amp; SKILLS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs">Technical skills</h2>
+<p class="font-body-md text-body-md text-text-muted">Technologies and tools I use to build secure systems and modern applications.</p>
+</div>
+<!-- Skills 3 Column Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<!-- Category 01: Programming & Dev -->
+<div class="p-space-lg rounded-xl bg-surface-elevated/80 shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-lowest/60 p-space-sm rounded-lg">
+<span class="font-label-caps text-label-caps text-primary-container">01</span>
+<span class="font-label-caps text-label-caps text-text-muted">LANGUAGES &amp; FRONTEND</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-md">Programming &amp; Development</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">C++</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">Python</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">Java</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">SQL</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">HTML</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">CSS</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">JavaScript</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">React</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">TypeScript</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">Tailwind CSS</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<div class="flex justify-between font-label-caps text-label-caps text-text-muted mb-1">
+<span>DEV PROFICIENCY</span>
+<span class="text-primary-container">EXPANDING</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-primary-container w-[88%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Category 02: Cybersecurity -->
+<div class="p-space-lg rounded-xl bg-surface-elevated/80 shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-lowest/60 p-space-sm rounded-lg">
+<span class="font-label-caps text-label-caps text-secondary">02</span>
+<span class="font-label-caps text-label-caps text-text-muted">INFOSEC &amp; PROTOCOLS</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-md">Cybersecurity</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-secondary hover:bg-surface-container-high transition-colors">Networking</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-secondary hover:bg-surface-container-high transition-colors">Linux</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-secondary hover:bg-surface-container-high transition-colors">Wireshark</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-secondary hover:bg-surface-container-high transition-colors">Nmap</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-secondary hover:bg-surface-container-high transition-colors">Burp Suite</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-secondary hover:bg-surface-container-high transition-colors">OWASP</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-secondary hover:bg-surface-container-high transition-colors">Ethical Hacking</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<div class="flex justify-between font-label-caps text-label-caps text-text-muted mb-1">
+<span>SECURITY AUDITING</span>
+<span class="text-secondary">ACTIVE PRACTICE</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[92%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Category 03: Tools & Platforms -->
+<div class="p-space-lg rounded-xl bg-surface-elevated/80 shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-space-md mb-space-md bg-surface-container-lowest/60 p-space-sm rounded-lg">
+<span class="font-label-caps text-label-caps text-primary-fixed">03</span>
+<span class="font-label-caps text-label-caps text-text-muted">ENVIRONMENT &amp; DISTROS</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-md">Tools &amp; Platforms</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">Git</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">GitHub</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">Docker</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-on-surface hover:bg-surface-container-high transition-colors">VS Code</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-primary-fixed hover:bg-surface-container-high transition-colors">Arch Linux</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-primary-fixed hover:bg-surface-container-high transition-colors">Fedora</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-primary-fixed hover:bg-surface-container-high transition-colors">Kali Linux</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-tertiary hover:bg-surface-container-high transition-colors">Ollama</span>
+<span class="px-3 py-1.5 rounded-lg bg-surface-container font-label-code text-label-code text-tertiary hover:bg-surface-container-high transition-colors">Open WebUI</span>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md">
+<div class="flex justify-between font-label-caps text-label-caps text-text-muted mb-1">
+<span>INFRA &amp; LINUX DEPLOY</span>
+<span class="text-primary-fixed">OPTIMIZED</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest rounded-full overflow-hidden">
+<div class="h-full bg-primary-fixed w-[95%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 04. FEATURED PROJECTS SECTION                                             -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl" id="projects">
+<!-- Section Kicker Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-label-caps text-label-caps text-primary-container mb-space-sm">
+<span class="material-symbols-outlined text-[14px]">folder_special</span>
+<span>// 03. ARTIFACTS &amp; BUILDS</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs">Featured projects</h2>
+<p class="font-body-md text-body-md text-text-muted">Some of the things I've built to apply my skills and solve problems.</p>
+</div>
+<!-- 2x2 Projects Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- Project 1: Bus Reservation System -->
+<div class="group p-space-xl rounded-xl bg-surface-elevated/70 shadow-lg hover:shadow-2xl hover:bg-surface-elevated transition-all flex flex-col justify-between">
+<div>
+<!-- Header metadata -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary-container group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">folder_open</span>
+</div>
+<a aria-label="Bus Reservation System GitHub" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/shihab-ahammed" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs group-hover:text-primary-container transition-colors">
+            Bus Reservation System
+          </h3>
+<p class="font-body-md text-body-md text-text-muted leading-relaxed mb-space-lg">
+            A comprehensive console-based reservation system built in C++ to manage bookings, track seat availability, and handle passenger records.
+          </p>
+</div>
+<div class="pt-space-md flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-primary">C++</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-on-surface-variant">File I/O</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-on-surface-variant">Data Structures</span>
+</div>
+</div>
+<!-- Project 2: Linux Customization Lab -->
+<div class="group p-space-xl rounded-xl bg-surface-elevated/70 shadow-lg hover:shadow-2xl hover:bg-surface-elevated transition-all flex flex-col justify-between">
+<div>
+<!-- Header metadata -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">tune</span>
+</div>
+<a aria-label="Linux Customization Lab GitHub" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-secondary transition-colors" href="https://github.com/shihab-ahammed" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs group-hover:text-secondary transition-colors">
+            Linux Customization Lab
+          </h3>
+<p class="font-body-md text-body-md text-text-muted leading-relaxed mb-space-lg">
+            A repository of scripts and configurations for customizing Arch Linux, Fedora, and Kali Linux. Includes automated dotfiles setup and ricing.
+          </p>
+</div>
+<div class="pt-space-md flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-secondary">Bash</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-on-surface-variant">Linux</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-on-surface-variant">Dotfiles</span>
+</div>
+</div>
+<!-- Project 3: Cybersecurity CTF Toolkit -->
+<div class="group p-space-xl rounded-xl bg-surface-elevated/70 shadow-lg hover:shadow-2xl hover:bg-surface-elevated transition-all flex flex-col justify-between">
+<div>
+<!-- Header metadata -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+<a aria-label="Cybersecurity CTF Toolkit GitHub" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/shihab-ahammed" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs group-hover:text-primary transition-colors">
+            Cybersecurity CTF Toolkit
+          </h3>
+<p class="font-body-md text-body-md text-text-muted leading-relaxed mb-space-lg">
+            A curated collection of scripts and tools for solving Capture The Flag challenges, focusing on network analysis and cryptography.
+          </p>
+</div>
+<div class="pt-space-md flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-primary-fixed-dim">Python</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-on-surface-variant">Networking</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-on-surface-variant">Cryptography</span>
+</div>
+</div>
+<!-- Project 4: AI Assistant Experiments -->
+<div class="group p-space-xl rounded-xl bg-surface-elevated/70 shadow-lg hover:shadow-2xl hover:bg-surface-elevated transition-all flex flex-col justify-between">
+<div>
+<!-- Header metadata -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-tertiary-fixed group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[28px]">neurology</span>
+</div>
+<a aria-label="AI Assistant Experiments GitHub" class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/shihab-ahammed" rel="noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mb-space-xs group-hover:text-tertiary-fixed transition-colors">
+            AI Assistant Experiments
+          </h3>
+<p class="font-body-md text-body-md text-text-muted leading-relaxed mb-space-lg">
+            Local LLM integrations using Ollama and Open WebUI to create a privacy-first AI assistant for coding and daily tasks.
+          </p>
+</div>
+<div class="pt-space-md flex flex-wrap gap-2">
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-tertiary">Ollama</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-on-surface-variant">Python</span>
+<span class="px-3 py-1 rounded-md bg-surface-container-high font-label-code text-label-code text-on-surface-variant">API</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 05. EDUCATION & EXPERIENCE TIMELINE                                      -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl" id="experience">
+<!-- Section Kicker Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-label-caps text-label-caps text-primary-container mb-space-sm">
+<span class="material-symbols-outlined text-[14px]">history_edu</span>
+<span>// 04. EXPERIENCE &amp; JOURNEY</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs">Education &amp; Experience</h2>
+<p class="font-body-md text-body-md text-text-muted">My academic background and professional journey so far.</p>
+</div>
+<!-- Timeline Grid: Main Tracks vs Learning Milestones -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<!-- Left Track: Academic & Teaching Experience -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg relative">
+<!-- Experience Card 1: Degree -->
+<div class="relative pl-8 sm:pl-10">
+<div class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[14px]">school</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-elevated/70 shadow-lg">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                B.Sc. in Computer Science &amp; Engineering
+              </h3>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-primary-container/20 text-primary-container">CURRENT</span>
+</div>
+<div class="font-label-code text-label-code text-primary-fixed mb-space-sm">Southeast University</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-label-caps text-label-caps text-text-muted mb-space-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">calendar_month</span>
+<span>Expected Graduation: Present</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Dhaka, Bangladesh</span>
+</span>
+</div>
+<p class="font-body-md text-body-md text-text-muted leading-relaxed">
+              Building a strong foundation in computer science principles, data structures, algorithms, and software engineering. Exploring cybersecurity and Linux as specialized interests.
+            </p>
+</div>
+</div>
+<!-- Experience Card 2: ICT Tutor -->
+<div class="relative pl-8 sm:pl-10">
+<div class="absolute left-0 top-1.5 w-6 h-6 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[14px]">cast_for_education</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-elevated/70 shadow-lg">
+<div class="flex flex-wrap items-center justify-between gap-2 mb-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">
+                ICT Tutor
+              </h3>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container text-text-muted">PART-TIME</span>
+</div>
+<div class="font-label-code text-label-code text-secondary mb-space-sm">Freelance</div>
+<div class="flex flex-wrap items-center gap-x-4 gap-y-1 font-label-caps text-label-caps text-text-muted mb-space-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span>
+<span>Part-time</span>
+</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Dhaka, Bangladesh</span>
+</span>
+</div>
+<p class="font-body-md text-body-md text-text-muted leading-relaxed">
+              Provided part-time ICT tutoring, helping students understand computer science fundamentals and basic programming concepts.
+            </p>
+</div>
+</div>
+</div>
+<!-- Right Track: Learning Journey Chronology (Steps 01-06) -->
+<div class="lg:col-span-5 p-space-xl rounded-xl bg-surface-container/40 shadow-lg">
+<div class="flex items-center justify-between mb-space-lg">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Learning Journey</h3>
+<span class="font-label-caps text-label-caps text-text-muted">EVOLUTION</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Step 01 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-primary-container font-bold shrink-0">01</span>
+<div class="min-w-0">
+<div class="font-label-code text-label-code text-on-surface font-medium">Started Programming</div>
+<div class="font-label-caps text-[10px] text-text-muted">C++ &amp; CORE FOUNDATIONS</div>
+</div>
+</div>
+<!-- Step 02 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-primary-container font-bold shrink-0">02</span>
+<div class="min-w-0">
+<div class="font-label-code text-label-code text-on-surface font-medium">Learned Linux</div>
+<div class="font-label-caps text-[10px] text-text-muted">BASH SCRIPTING &amp; SYSADMIN</div>
+</div>
+</div>
+<!-- Step 03 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-secondary font-bold shrink-0">03</span>
+<div class="min-w-0">
+<div class="font-label-code text-label-code text-on-surface font-medium">Switched to Arch Linux</div>
+<div class="font-label-caps text-[10px] text-text-muted">CUSTOM ENVIRONMENT &amp; RICING</div>
+</div>
+</div>
+<!-- Step 04 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-secondary font-bold shrink-0">04</span>
+<div class="min-w-0">
+<div class="font-label-code text-label-code text-on-surface font-medium">Started Cybersecurity</div>
+<div class="font-label-caps text-[10px] text-text-muted">CTFS, WIRESHARK &amp; OWASP</div>
+</div>
+</div>
+<!-- Step 05 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-primary-fixed font-bold shrink-0">05</span>
+<div class="min-w-0">
+<div class="font-label-code text-label-code text-on-surface font-medium">Learning AI</div>
+<div class="font-label-caps text-[10px] text-text-muted">LOCAL LLMS WITH OLLAMA</div>
+</div>
+</div>
+<!-- Step 06 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-elevated/50 hover:bg-surface-elevated transition-colors">
+<span class="w-8 h-8 rounded bg-surface-container-highest flex items-center justify-center font-label-code text-label-code text-primary-container font-bold shrink-0">06</span>
+<div class="min-w-0">
+<div class="font-label-code text-label-code text-on-surface font-medium">Building Real-world Projects</div>
+<div class="font-label-caps text-[10px] text-text-muted">END-TO-END SECURE APPLICATIONS</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 06. LATEST WRITING / RESEARCH NOTES                                       -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl" id="writing">
+<!-- Section Kicker Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-label-caps text-label-caps text-primary-container mb-space-sm">
+<span class="material-symbols-outlined text-[14px]">feed</span>
+<span>// 05. ARTICLES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs">Latest writing</h2>
+<p class="font-body-md text-body-md text-text-muted">Thoughts, tutorials, and insights on tech, cybersecurity, and Linux.</p>
+</div>
+<!-- Article Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg mb-space-xl">
+<!-- Article 1: Arch Linux -->
+<div class="group p-space-lg rounded-xl bg-surface-elevated/70 shadow-lg hover:shadow-xl hover:bg-surface-elevated transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-highest font-label-code text-xs text-primary font-semibold">Linux</span>
+<span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">menu_book</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-sm group-hover:text-primary-container transition-colors leading-snug">
+            Mastering Linux Customization: A Guide to Arch Linux
+          </h3>
+<p class="font-body-md text-body-md text-text-muted mb-space-lg leading-relaxed">
+            Dive into the world of dotfiles, window managers, and ricing to create the perfect development environment on Arch Linux.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-md border-t border-surface-border/40 font-label-code text-xs text-text-muted">
+<span class="flex items-center gap-1 text-terminal-amber">
+<span class="w-1.5 h-1.5 rounded-full bg-terminal-amber"></span>
+<span>Coming Soon</span>
+</span>
+<span>5 min read</span>
+</div>
+</div>
+<!-- Article 2: Network Protocols -->
+<div class="group p-space-lg rounded-xl bg-surface-elevated/70 shadow-lg hover:shadow-xl hover:bg-surface-elevated transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-highest font-label-code text-xs text-secondary font-semibold">Cybersecurity</span>
+<span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-secondary transition-colors">shield</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-sm group-hover:text-secondary transition-colors leading-snug">
+            Understanding Network Protocols for Ethical Hacking
+          </h3>
+<p class="font-body-md text-body-md text-text-muted mb-space-lg leading-relaxed">
+            A beginner-friendly breakdown of TCP/IP, DNS, and HTTP, and how attackers exploit misconfigurations in these protocols.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-md border-t border-surface-border/40 font-label-code text-xs text-text-muted">
+<span class="flex items-center gap-1 text-terminal-amber">
+<span class="w-1.5 h-1.5 rounded-full bg-terminal-amber"></span>
+<span>Coming Soon</span>
+</span>
+<span>8 min read</span>
+</div>
+</div>
+<!-- Article 3: Local LLMs with Ollama -->
+<div class="group p-space-lg rounded-xl bg-surface-elevated/70 shadow-lg hover:shadow-xl hover:bg-surface-elevated transition-all flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-2.5 py-1 rounded-md bg-surface-container-highest font-label-code text-xs text-tertiary-fixed font-semibold">AI</span>
+<span class="material-symbols-outlined text-[20px] text-text-muted group-hover:text-primary transition-colors">psychology</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-sm group-hover:text-tertiary-fixed transition-colors leading-snug">
+            Running Local LLMs with Ollama
+          </h3>
+<p class="font-body-md text-body-md text-text-muted mb-space-lg leading-relaxed">
+            How to set up your own private, locally-hosted AI assistant using Ollama and Open WebUI without compromising data privacy.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-md border-t border-surface-border/40 font-label-code text-xs text-text-muted">
+<span class="flex items-center gap-1 text-terminal-amber">
+<span class="w-1.5 h-1.5 rounded-full bg-terminal-amber"></span>
+<span>Coming Soon</span>
+</span>
+<span>6 min read</span>
+</div>
+</div>
+</div>
+<!-- All Articles Footer Link -->
+<div class="text-center">
+<a class="inline-flex items-center gap-2 font-label-code text-label-code text-on-surface hover:text-primary-container transition-colors py-2 px-4 rounded-lg bg-surface-elevated hover:bg-surface-container-high" href="#writing">
+<span>View all articles</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- ========================================================================= -->
+<!-- 07. GET IN TOUCH / CONTACT SECTION                                        -->
+<!-- ========================================================================= -->
+<section class="w-full max-w-[1280px] mx-auto px-margin-sm md:px-margin py-space-xl mb-12" id="contact">
+<!-- Section Kicker Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high font-label-caps text-label-caps text-primary-container mb-space-sm">
+<span class="material-symbols-outlined text-[14px]">satellite_alt</span>
+<span>// 06. CONNECT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold mb-space-xs">Get in touch</h2>
+<p class="font-body-md text-body-md text-text-muted">Have a question or want to work together? Reach out!</p>
+</div>
+<!-- Split Grid: Contact Channels vs Form -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-stretch">
+<!-- Left Column: Contact Cards -->
+<div class="lg:col-span-5 p-space-xl rounded-xl bg-surface-elevated/80 shadow-xl flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold mb-space-lg">Contact Information</h3>
+<div class="flex flex-col gap-space-md">
+<!-- Email -->
+<a class="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="mailto:ahammedshihab15@gmail.com">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-container group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-caps text-label-caps text-text-muted">EMAIL</div>
+<div class="font-label-code text-label-code text-on-surface truncate">ahammedshihab15@gmail.com</div>
+</div>
+</a>
+<!-- LinkedIn -->
+<a class="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="https://www.linkedin.com/in/shihab-ahammed/" rel="noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">connect_without_contact</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-caps text-label-caps text-text-muted">LINKEDIN</div>
+<div class="font-label-code text-label-code text-on-surface truncate">shihab-ahammed</div>
+</div>
+</a>
+<!-- Instagram -->
+<a class="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="https://www.instagram.com/_laz_yyyy__/" rel="noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary-fixed group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">camera_alt</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-caps text-label-caps text-text-muted">INSTAGRAM</div>
+<div class="font-label-code text-label-code text-on-surface truncate">@_laz_yyyy__</div>
+</div>
+</a>
+<!-- GitHub -->
+<a class="p-space-md rounded-lg bg-surface-container/60 hover:bg-surface-container-high flex items-center gap-space-md transition-colors group" href="https://github.com/ahammed-shihab" rel="noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-caps text-label-caps text-text-muted">GITHUB</div>
+<div class="font-label-code text-label-code text-on-surface truncate">ahammed-shihab</div>
+</div>
+</a>
+<!-- Location -->
+<div class="p-space-md rounded-lg bg-surface-container/60 flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-signal-crimson">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div class="min-w-0">
+<div class="font-label-caps text-label-caps text-text-muted">LOCATION</div>
+<div class="font-label-code text-label-code text-on-surface truncate">Dhaka, Bangladesh</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-lg pt-space-md border-t border-surface-border/40 font-label-caps text-label-caps text-text-muted flex items-center justify-between">
+<span>RESPONSE PROTOCOL</span>
+<span class="text-secondary">&lt; 24 HOURS</span>
+</div>
+</div>
+<!-- Right Column: Interactive Dispatch Message Form -->
+<div class="lg:col-span-7 p-space-xl rounded-xl bg-surface-elevated/80 shadow-xl flex flex-col justify-between">
+<form class="flex flex-col gap-space-md" id="contactForm" onsubmit="event.preventDefault(); document.getElementById('submitStatus').classList.remove('hidden');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Name Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-code text-label-code text-text-muted" for="contact-name">NAME</label>
+<input class="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md placeholder:text-outline-variant focus:outline-none focus:ring-1 focus:ring-primary-container shadow-inner" id="contact-name" placeholder="John Doe" required="" type="text"/>
+</div>
+<!-- Email Input -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-code text-label-code text-text-muted" for="contact-email">EMAIL</label>
+<input class="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md placeholder:text-outline-variant focus:outline-none focus:ring-1 focus:ring-primary-container shadow-inner" id="contact-email" placeholder="john@example.com" required="" type="email"/>
+</div>
+</div>
+<!-- Message Textarea -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-code text-label-code text-text-muted" for="contact-msg">MESSAGE</label>
+<textarea class="w-full px-space-md py-3 rounded-lg bg-surface-container-lowest text-on-surface font-body-md placeholder:text-outline-variant focus:outline-none focus:ring-1 focus:ring-primary-container shadow-inner resize-none" id="contact-msg" placeholder="Hello, I'd like to talk about..." required="" rows="5"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full py-3.5 px-space-md rounded-xl bg-primary-container text-surface-obsidian font-label-code text-label-code font-bold flex items-center justify-center gap-2 hover:shadow-[0_0_20px_rgba(0,242,254,0.4)] transition-all cursor-pointer" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+<!-- Feedback notification element -->
+<div class="hidden p-space-sm rounded-lg bg-secondary-container/20 text-secondary font-label-code text-label-code text-center" id="submitStatus">
+            Packet dispatched successfully. Thank you for connecting!
+          </div>
+</form>
+<div class="mt-space-lg pt-space-md border-t border-surface-border/40 font-label-caps text-label-caps text-text-muted flex items-center justify-between">
+<span>ENCRYPTION: 256-BIT END-TO-END</span>
+<span>PGP KEY AVAILABLE ON REQUEST</span>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-obsidian border-t border-surface-border py-space-xl"><div class="max-w-[1280px] mx-auto px-margin-sm md:px-margin flex flex-col gap-space-xl"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-lg border-b border-surface-border/50"><div class="max-w-md"><div class="flex items-center gap-space-xs font-label-code text-label-code text-primary mb-space-xs"><span class="text-secondary">shihab</span><span class="text-outline-variant">:~/core</span></div><p class="font-body-md text-body-md text-text-muted">Building secure systems and exploring the boundaries of Linux, cybersecurity, and software development.</p></div><div class="flex flex-wrap items-center gap-space-md"><a class="font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="#skills">Skills</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="#projects">Projects</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="#experience">Experience</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="#writing">Writing</a><a class="font-label-code text-label-code text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a></div></div><div class="flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-caps text-label-caps text-text-muted"><div class="flex items-center gap-space-sm"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span>LATENCY: 14ms // KERNEL: SEC_PORT_v2.6</span></div><div>Root access to knowledge, one shell at a time.</div><div>© 2026 Shihab Ahammed. All rights reserved.</div></div></div></footer></body></html>
+
+mainly they made these changes 
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-09-12T15:06:32+06:00.
+</ADDITIONAL_METADATA>

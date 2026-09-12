@@ -18,13 +18,20 @@ export default function About() {
 <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
 {/*  Bio Longform Narrative Card  */}
 <div className="lg:col-span-6 p-space-xl rounded-xl bg-surface-elevated/70 shadow-xl backdrop-blur-md flex flex-col gap-space-md leading-relaxed">
-<div className="flex items-center gap-2 font-label-code text-label-code text-secondary mb-1">
-<span className="material-symbols-outlined text-[18px]">verified_user</span>
-<span>ROOT_NARRATIVE</span>
+<div className="flex flex-col sm:flex-row gap-space-lg items-start">
+  <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-2xl overflow-hidden shrink-0 shadow-[0_0_20px_rgba(0,242,254,0.15)] border border-surface-border">
+    <Image className="w-full h-full object-cover" alt="Shihab Ahammed" src="/profile.jpg" width={160} height={160} priority />
+  </div>
+  <div className="flex-1 flex flex-col gap-space-sm">
+    <div className="flex items-center gap-2 font-label-code text-label-code text-secondary mb-1">
+      <span className="material-symbols-outlined text-[18px]">verified_user</span>
+      <span>ROOT_NARRATIVE</span>
+    </div>
+    <p className="font-body-lg text-body-lg text-on-surface">
+      Hello — I'm <strong className="text-primary-container font-semibold">Shihab Ahammed</strong>, a motivated Computer Science student based in Dhaka, Bangladesh, currently studying at Southeast University.
+    </p>
+  </div>
 </div>
-<p className="font-body-lg text-body-lg text-on-surface">
-          Hello — I'm <strong className="text-primary-container font-semibold">Shihab Ahammed</strong>, a motivated Computer Science student based in Dhaka, Bangladesh, currently studying at Southeast University.
-        </p>
 <p className="font-body-md text-body-md text-text-muted">
           My journey into technology began with a deep curiosity about how systems work. This led me to explore Linux, transitioning from standard desktop environments to advanced dual-boot setups and customizing Arch Linux to fit my workflow perfectly.
         </p>
