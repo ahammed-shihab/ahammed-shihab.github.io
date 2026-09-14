@@ -74,7 +74,7 @@ export default function Hero() {
             <Image
               className="w-full h-full object-cover"
               alt="Shihab Ahammed"
-              src="/profile.png"
+              src="/profile.jpg"
               width={256}
               height={256}
               priority
