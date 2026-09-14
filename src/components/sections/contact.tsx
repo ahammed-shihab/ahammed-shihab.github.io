@@ -110,7 +110,7 @@ export default function Contact() {
               />
             </div>
             <button
-              className="w-full py-3.5 px-space-md rounded-xl bg-primary-container text-surface-obsidian font-label-code text-label-code font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all cursor-pointer"
+              className="w-full py-3.5 px-space-md rounded-xl bg-primary text-on-primary font-label-code text-label-code font-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all cursor-pointer"
               type="submit"
             >
               <span>Send Message</span>

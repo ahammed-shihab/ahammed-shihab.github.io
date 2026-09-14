@@ -49,12 +49,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${jetbrains.variable} scroll-smooth dark`}
+      className={`${geist.variable} ${jetbrains.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <body className="bg-surface-obsidian font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-surface-obsidian min-h-screen flex flex-col">
+      <body className="bg-background font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
         <Navbar />
-        <main className="flex-1 w-full pt-16 bg-surface-obsidian">
+        <main className="flex-1 w-full pt-16 bg-background">
           {children}
         </main>
         <Footer />

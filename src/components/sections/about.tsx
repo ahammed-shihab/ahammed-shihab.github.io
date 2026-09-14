@@ -19,7 +19,7 @@ export default function About() {
         <div className="lg:col-span-6 p-space-xl rounded-xl bg-surface-elevated/70 shadow-lg flex flex-col gap-space-md leading-relaxed">
           <div className="flex flex-col sm:flex-row gap-space-lg items-start">
             <div className="relative w-32 h-32 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border border-surface-border">
-              <Image className="w-full h-full object-cover" alt="Shihab Ahammed" src="/profile.png" width={144} height={144} priority />
+              <Image className="w-full h-full object-cover" alt="Shihab Ahammed" src="/profile.jpg" width={144} height={144} priority />
             </div>
             <div className="flex-1">
               <p className="font-body-lg text-body-lg text-on-surface">
