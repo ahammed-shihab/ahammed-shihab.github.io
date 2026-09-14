@@ -67,10 +67,32 @@ export default function Hero() {
         </div>
 
         {/* Right Column */}
-        <div className="lg:col-span-5 flex flex-col gap-space-md">
+        <div className="lg:col-span-5 flex flex-col items-center gap-space-lg">
+
+          {/* Large profile photo */}
+          <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-3xl overflow-hidden ring-4 ring-primary-container/20 shadow-2xl">
+            <Image
+              className="w-full h-full object-cover"
+              alt="Shihab Ahammed"
+              src="/profile.png"
+              width={256}
+              height={256}
+              priority
+            />
+          </div>
+
+          {/* Name + location badge below photo */}
+          <div className="text-center">
+            <p className="font-headline-sm text-headline-sm text-on-surface font-semibold">Shihab Ahammed</p>
+            <p className="font-label-code text-label-code text-text-muted text-xs mt-1">Dhaka, Bangladesh · GMT +6</p>
+            <span className="inline-flex items-center gap-1.5 mt-2 px-3 py-1 rounded-full bg-secondary/10 border border-secondary/20 text-secondary font-label-code text-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+              Open to opportunities
+            </span>
+          </div>
 
           {/* Terminal card */}
-          <div className="bg-surface-elevated/90 rounded-xl shadow-xl overflow-hidden">
+          <div className="w-full bg-surface-elevated/90 rounded-xl shadow-xl overflow-hidden">
             {/* Terminal header */}
             <div className="bg-surface-container-highest px-space-md py-2.5 flex items-center gap-2">
               <span className="w-3 h-3 rounded-full bg-red-400/80"></span>
@@ -83,16 +105,6 @@ export default function Hero() {
             <div className="p-space-lg font-label-code text-label-code space-y-3 bg-surface-obsidian/70">
               <div className="flex items-center gap-2">
                 <span className="text-secondary">$</span>
-                <span className="text-primary-container">whoami</span>
-              </div>
-              <div className="text-on-surface pl-4 text-xs leading-relaxed space-y-1">
-                <div><span className="text-text-muted">Name:    </span>Shihab Ahammed</div>
-                <div><span className="text-text-muted">Role:    </span>CS Student &amp; Security Researcher</div>
-                <div><span className="text-text-muted">Uni:     </span>Southeast University, Dhaka</div>
-                <div><span className="text-text-muted">OS:      </span>Arch Linux x86_64</div>
-              </div>
-              <div className="flex items-center gap-2 pt-1">
-                <span className="text-secondary">$</span>
                 <span className="text-primary-container">cat skills.txt</span>
               </div>
               <div className="bg-surface-container-lowest/90 p-space-sm rounded text-xs space-y-1 pl-4">
@@ -104,18 +116,6 @@ export default function Hero() {
                 <span className="text-secondary">$</span>
                 <span className="text-primary-container animate-pulse">▊</span>
               </div>
-            </div>
-          </div>
-
-          {/* Profile card */}
-          <div className="p-space-md rounded-xl bg-surface-container/60 border border-surface-border/40 flex items-center gap-space-md">
-            <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0">
-              <Image className="w-full h-full object-cover" alt="Shihab Ahammed" src="/profile.png" width={56} height={56} priority />
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="font-headline-sm text-headline-sm text-on-surface font-semibold">Shihab Ahammed</p>
-              <p className="font-label-code text-label-code text-text-muted text-xs">Dhaka, Bangladesh · GMT +6</p>
-              <p className="font-label-code text-xs text-secondary mt-0.5">Open to security internships</p>
             </div>
           </div>
 
