@@ -3,6 +3,37 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-surface-obsidian/85 backdrop-blur-xl border-b border-surface-border"><div className="h-16 max-w-[1280px] mx-auto px-margin-sm md:px-margin flex items-center justify-between gap-space-md"><div className="flex items-center gap-space-md"><a className="flex items-center gap-space-xs font-label-code text-label-code text-primary hover:text-primary-container transition-colors" href="#"><span className="text-secondary">shihab</span><span className="text-outline-variant">@</span><span className="text-primary-container">sec</span><span className="text-text-muted">:~$</span></a><div className="hidden sm:flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-low border border-surface-border"><span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span className="font-label-caps text-label-caps text-secondary">OP_READY // HIRE &amp; CTF</span></div></div><nav className="hidden lg:flex items-center gap-space-lg" data-active-classes="text-primary font-bold"><a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="about" href="#about">About</a><a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="skills" href="#skills">Skills</a><a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="projects" href="#projects">Projects</a><a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="experience" href="#experience">Experience</a><a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="writing" href="#writing">Writing</a><a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" data-path="contact" href="#contact">Contact</a></nav><div className="flex items-center gap-space-sm"><a aria-label="GitHub" className="w-8 h-8 rounded-lg border border-surface-border bg-surface-elevated/60 hover:bg-surface-elevated hover:text-on-surface text-on-surface-variant flex items-center justify-center transition-all" href="https://github.com/ahammed-shihab" rel="noreferrer" target="_blank"><FaGithub size={18} /></a><a aria-label="LinkedIn" className="w-8 h-8 rounded-lg border border-surface-border bg-surface-elevated/60 hover:bg-surface-elevated hover:text-on-surface text-on-surface-variant flex items-center justify-center transition-all" href="https://www.linkedin.com/in/shihab-ahammed/" rel="noreferrer" target="_blank"><FaLinkedin size={18} /></a><a className="hidden md:inline-flex items-center px-space-md py-1.5 rounded-lg bg-primary-container text-surface-obsidian font-label-code text-label-code font-bold hover:shadow-[0_0_16px_rgba(0,242,254,0.35)] transition-all" href="#contact">Get in Touch</a><div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span className="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header>
+    <header className="fixed top-0 left-0 w-full z-50 bg-surface-obsidian/90 backdrop-blur-xl border-b border-surface-border">
+      <div className="h-16 max-w-[1280px] mx-auto px-margin-sm md:px-margin flex items-center justify-between gap-space-md">
+
+        {/* Logo */}
+        <a className="font-label-code text-label-code text-on-surface font-semibold hover:text-primary transition-colors" href="#">
+          <span className="text-primary-container">shihab</span><span className="text-text-muted">.dev</span>
+        </a>
+
+        {/* Nav links */}
+        <nav className="hidden lg:flex items-center gap-space-lg">
+          <a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" href="#about">About</a>
+          <a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" href="#skills">Skills</a>
+          <a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" href="#projects">Projects</a>
+          <a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" href="#experience">Experience</a>
+          <a className="font-label-code text-label-code text-on-surface-variant hover:text-on-surface transition-colors" href="#contact">Contact</a>
+        </nav>
+
+        {/* Social + CTA */}
+        <div className="flex items-center gap-space-sm">
+          <a aria-label="GitHub" className="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" href="https://github.com/ahammed-shihab" rel="noreferrer" target="_blank">
+            <FaGithub size={18} />
+          </a>
+          <a aria-label="LinkedIn" className="w-8 h-8 flex items-center justify-center text-on-surface-variant hover:text-on-surface transition-colors" href="https://www.linkedin.com/in/shihab-ahammed/" rel="noreferrer" target="_blank">
+            <FaLinkedin size={18} />
+          </a>
+          <a className="hidden md:inline-flex items-center px-space-md py-1.5 rounded-lg bg-primary-container text-surface-obsidian font-label-code text-label-code font-bold hover:opacity-90 transition-all" href="#contact">
+            Hire Me
+          </a>
+        </div>
+
+      </div>
+    </header>
   );
 }
